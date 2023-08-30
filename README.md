@@ -1,3 +1,4 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2023-AD263)](https://api.reuse.software/info/github.com/SAP-samples/teched2023-AD263)
 # Session ID - Session Title
 
 ## Description

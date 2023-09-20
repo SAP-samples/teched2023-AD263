@@ -18,17 +18,42 @@ The requirements to follow the exercises in this repository are...
 Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 1 - Prepare SAP BTP CF Subaccount](exercises/ex1/)
+    - [Exercise 1.1 - Connect to SAP BTP CF Subaccount](exercises/ex1#exercise-11-sub-exercise-1-description)
+    - [Exercise 1.1 - Check Demo Application](exercises/ex1#exercise-11-sub-exercise-1-description)
+    - [Exercise 1.2 - Check Connectivity from SAP BTP CF to SAP Cloud ALM (optional)](exercises/ex1#exercise-12-sub-exercise-2-description)
+    - [Exercise 1.2 - Check Cloud ALM Intrumentation for Demo Application (optional)](exercises/ex1#exercise-12-sub-exercise-2-description)
+    - [Exercise 1.2 - Trigger Exception from Demo Application](exercises/ex1#exercise-12-sub-exercise-2-description)
+    - [Exercise 1.2 - Review Exception from Demo Application in Cloud Logging Service](exercises/ex1#exercise-12-sub-exercise-2-description)
+- [Exercise 2 - Prepare SAP Cloud ALM](exercises/ex2/)
+    - [Exercise 2.1 - Check Landscape Management Service](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.2 - Check Health Monitoring for BTP CF Demo Application in your BTP subaccount](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Exercise 2.1 - Configure Integration and Exception Monitoring and Alerting for your BTP CF Demo application](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.1 - Trigger Exception from Demo Application](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.1 - View Exception in Cloud ALM Exception Monitoring](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.1 - View Alert in Cloud ALM Exception Monitoring](exercises/ex2#exercise-21-sub-exercise-1-description)
+- [Exercise 3 - Configure Integration with External Ticket Management System from Cloud ALM](exercises/ex2/)
+    - [Exercise 2.1 - Create Destination in SAP Cloud ALM BTP Cockpit](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.2 - Create Mapping](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Exercise 2.2 - Create Subscription](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Exercise 2.2 - Test Ticket creation from Alert](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Exercise 2.2 - Enable automatic Ticket creation for Exception Management Events](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 4 - End-to-End Execution](exercises/ex2/)
+    - [Exercise 2.1 - Trigger Exception from Demo Application](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.1 - View Alert in Cloud ALM Exception Monitoring](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.2 - Jump from Alert to Ticket](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Exercise 2.2 - Review created Ticket in Demo Ticket Application](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Exercise 2.2 - Start Processing of Ticket in Demo Ticket Application](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Exercise 2.2 - Review Alert Status after Ticket was set to in Progress](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 5 - Troubleshooting](exercises/ex2/)
+    - [Exercise 2.1 - Intelligent Event Processing Execution Log](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.1 - Intelligent Event Processing Event Paload Trace (optional)](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.2 - External API Management Console](exercises/ex2#exercise-22-sub-exercise-2-description)
 
   
 **OR** Link to the Tutorial Navigator for example...
 
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
+Start the exercises [here] (https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad#Shell-home)).
 
 **IMPORTANT**
 

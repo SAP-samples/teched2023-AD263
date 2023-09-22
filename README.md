@@ -15,9 +15,8 @@ This session introduces attendees to the usage of SAP Cloud ALM as central obser
 ## Requirements
 
 The requirements to follow the exercises in this repository
-
-Very basic knowledge in BTP Cockpit
-Please use the Chrome browser on your Teched laptop
+- Very basic knowledge in BTP Cockpit
+- Please use the Chrome browser on your Teched laptop
 
 ## Exercises
 

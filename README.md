@@ -4,15 +4,20 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2022 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2022 session called AD263 - Configure Alerting for SAP BTP Using SAP Cloud ALM.
+
+Get an overview regarding the coverage of the SAP Cloud ALM tool for use with the different components of SAP Business Technology Platform (SAP BTP). Configure some of the use cases, from configuration of data collection down to the integration of third-party consumers such as ticket systems. Learn how you can replace existing scenarios of SAP Alert Notification service for SAP BTP with SAP Cloud ALM. See how to enhance, customize, and troubleshoot integration to third-party event consumers.
 
 ## Overview
 
-This session introduces attendees to...
+This session introduces attendees to the usage of SAP Cloud ALM as central observability solution for your whole SAP Solution Landscape. Escpecially in this session we will focus on the capabilities for customer developed applications in SAP BTP Cloud Foundry. You will learn how connect a PaaS application to SAP Cloud ALM, how to navigate Health Monitoring and Integration a& Exception Monitoring and how to set up alerts and notifications. To react to alerts, you will learn how to forward the event situations from SAP Cloud ALM to external 3rd party incident management tools.
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are...
+The requirements to follow the exercises in this repository
+
+Very basic knowledge in BTP Cockpit
+Please use the Chrome browser on your Teched laptop
 
 ## Exercises
 
@@ -51,8 +56,6 @@ Provide the exercise content here directly in README.md using [markdown](https:/
     - [Exercise 5.2 - Intelligent Event Processing Event Paload Trace (optional)](exercises/ex2#exercise-21-sub-exercise-1-description)
     - [Exercise 5.3 - External API Management Console](exercises/ex2#exercise-22-sub-exercise-2-description)
 
-  
-**OR** Link to the Tutorial Navigator for example...
 
 Start the exercises [here] (https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad#Shell-home)).
 
@@ -68,7 +71,7 @@ Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples
 
 ## How to obtain support
 
-Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
+Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via email to [cloudalm@sap.com](mailto:cloudalm@sap.com).
 
 ## License
 Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.

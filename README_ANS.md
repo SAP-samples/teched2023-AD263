@@ -250,10 +250,7 @@ _"healthy"_ using the **Availability Check** tile within the application's UI. T
 In no time the Cloud Controller will find out that our application is unhealthy and very soon you'll have an event in your storage that informs for this situation. Preview
 the associated with application crash event by clicking on the **Stored events** tile in the main page of your application's UI.
 
-### Congrats - you've just completed the session! We are always open for your questions and feedback:
-* today → demo pod session labeled as **Next Gen DevOps in the SAP Cloud**
-* for the time being → SOF01, 4.10 and 4.10
-* anytime →  [DL CLM SL Hybrid Supportability](mailto:DL_58B295755F99B7BFE4000005@global.corp.sap)
+### Congrats - you've just completed the session!
 ---
  
 ### **Want to automate the reactions to your routine problems?**

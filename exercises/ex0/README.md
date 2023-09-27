@@ -30,6 +30,11 @@ Select Subaccount: AD263-XXX ***(replace XXX with your group number)***
 
 ## Check Demo Application (Optional)
 
+The complete procedure how to instrument customer developed applications is described in the SAP Cloud ALM Expert Portal
+<https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/data-collection-infrastructure.html>
+
+See also the Hands-On XP261 Observability for Your SAP BTP Applications with SAP Cloud ALM for a step-by-step explanation.
+
 ### Check Connectivity from SAP BTP CF to SAP Cloud ALM (optional)
 
 Navigate to Connectivity -> Destinations
@@ -100,7 +105,7 @@ Klick on the link to open the Incident Mock Demo application
 
 In your BTP space a sample java application has been deployed, which can create exceptions on user requests. This is a mock application to simulate exception creations from customer developed PaaS applications.
 
-- Please click the button Create Exception to raise some example exceptions from this Application
+- Please click the button `Create Exception` to raise some example exceptions from this Application
 
 The very same application is also used as mock ticketing system, which means tickets can be created in the application by a remote call and the ticket can be shown here. Please keep the application window open for the remainder of this hands-on session.
 

@@ -1,5 +1,7 @@
 # Exercise 3 - Configure Integration with External Ticket Management System from Cloud ALM
 
+SAP Cloud ALM does not offer a build-in Incident Management functionality. To enable collaboration a 3rd party incident management tool can be integrated with Cloud ALM. The complete step-by-step documentation is available at <https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/intelligent-event-processing/integration-ticket-systems.html>. The following steps explain how to connect the demo application in your BTP CF account as incident management tool.
+
 ## Create Destination to your Incident Management Ticket System
 
 ### Logon to BTP Cockpit subaccount where your SAP Cloud ALM is deployed
@@ -8,23 +10,19 @@ Navigate to Connectivity->Destinations: (direct link) <https://emea.cockpit.btp.
 
 ### Create a new Destination as follows
 
+```
 Destination Configuration: Blank Template
-
-Name: CALM\_INCIDENT\_AD263-XXX ***(replace XXX with your group number)***
-
+Name: CALM_INCIDENT_AD263-XXX (replace XXX with your group number)
 Type: HTTP
-
-Description: Incident for AD263-XXX ***(replace XXX with your group number)***
-
+Description: Incident for AD263-XXX (replace XXX with your group number)
 Proxy Type: Internet
-
 Authentication: NoAuthentication
-
 Use default JDK truststore: yes
+```
 
 ![](./images/001.png)
 
-To find the correct URL for the Incident Application deployed in your subaccount, please logon to your BTP Subaccount AD263-XXX and navigate to Cloud Foundry -> Spaces -> AD263-XXX -> Applications -> TechEd2023Incident
+To find the correct URL for the Incident Application deployed in your subaccount, please logon to your BTP Subaccount AD263-XXX ***(replace XXX with your group number)*** and navigate to Cloud Foundry -> Spaces -> AD263-XXX -> Applications -> TechEd2023Incident 
 
 ![](./images/002.png)
 
@@ -50,17 +48,14 @@ Navigate to “External API Management”
 
 Create a new Webhook ![](./images/006.png) AD263-XXX\_Webhook ***(replace XXX with your group number)***
 
-Name: AD263-XXX\_Webhook ***(replace XXX with your group number)***
-
+```
+Name: AD263-XXX_Webhook (replace XXX with your group number)
 Path: /api/v1/tech-ed
-
 External Resource Type: Incident
-
 Destination Source: BTP Destination
-
-Destination Id: CALM\_INCIDENT\_AD263-XXX (replace XXX with your group number, the destination you have created in the previous step)
-
+Destination Id: CALM_INCIDENT_AD263-XXX (replace XXX with your group number, the destination you have created in the previous step)
 Destination Type: Other
+```
 
 ![](./images/007.png)
 
@@ -68,21 +63,20 @@ Save
 
 ## Create Subscription
 
-Create a new Subscription ![](008.png) AD263-XXX\_Ticket ***(replace XXX with your group number)****
+Create a new Subscription ![](./images/008.png) AD263-XXX\_Ticket ***(replace XXX with your group number)****
 
-Name: AD263-XXX\_Ticket ***(replace XXX with your group number)****
-
+```
+Name: AD263-XXX_Ticket (replace XXX with your group number)
 Description: Ticket Application for AD263-XXX ***(replace XXX with your group number)***
-
 Type: Built-in
-
 Resource Type: CALM Event Situation
-
-Webhook: AD263-XXX\_Webhook ***(replace XXX with your group number)***
-
+Webhook: AD263-XXX_Webhook (replace XXX with your group number)
 Mapping: AD263 Teched Demo Ticket System (all groups can use the same mapping)
+```
 
 ![](./images/009.png)
+
+The mapping file provided is a definition of the API structure. Your trainer has already provided a mapping file for the Demo Application in your excercise SAP Cloud ALM account.
 
 ## Create ticket manually from Alert Inbox
 

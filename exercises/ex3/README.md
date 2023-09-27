@@ -4,7 +4,7 @@
 
 ### Logon to BTP Cockpit subaccount where your SAP Cloud ALM is deployed
 
-Navigate to Connectivity->Destinations: (direct link) <https://emea.cockpit.btp.cloud.sap/cockpit#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/731a2c70-457e-466c-a810-d32cf775c958/destinations>
+Navigate to Connectivity->Destinations: (direct link) <hhttps://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/731a2c70-457e-466c-a810-d32cf775c958/destinations>
 
 ### Create a new Destination as follows
 

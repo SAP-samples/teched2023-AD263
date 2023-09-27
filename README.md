@@ -27,9 +27,9 @@ Provide the exercise content here directly in README.md using [markdown](https:/
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Configure Alert Notification Service](exercises/ex1/)
 - [Exercise 2 - Prepare SAP Cloud ALM](exercises/ex2/)
-- [Exercise 3 - Configure Integration with External Ticket Management System from Cloud ALM](exercises/ex2/)
-- [Exercise 4 - End-to-End Execution](exercises/ex2/)
-- [Exercise 5 - Troubleshooting](exercises/ex2/)
+- [Exercise 3 - Configure Integration with External Ticket Management System from Cloud ALM](exercises/ex3/)
+- [Exercise 4 - End-to-End Execution](exercises/ex4/)
+- [Exercise 5 - Troubleshooting](exercises/ex5/)
 
 
 Start the exercises [here] (https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad#Shell-home)).

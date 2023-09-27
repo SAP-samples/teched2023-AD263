@@ -18,51 +18,11 @@ Let's do it...
 
 ---
 
-### **1. Create Your Trial Account**
-1. Visit https://www.sap.com and click the Log On icon in the upper-right corner
-2. You can either enter your Global SAP credentials or create a brand new SAP account following the steps in Get a Free Trial Account on SAP BTP
-3. Once you have entered SAP trial account on SAP BTP, click on **Enter Your Trial Account**
+### **1. Access Alert Notification service**
+1. Visit your SAP BTP Accoiunt and access the service "Alert Notification service for SAP BTP"
+  
 
-### **2. Instantiate Alert Notification and Initial Setup**
-1. Navigate to the subaccount named **trial**
-2. Navigate to **Members** tab (located on the left) and add the following user _sap_cp_eu10_ans@sap.com_ with role **Organization Auditor**. It's needed to pull lifecycle events for this subaccount.
-3. Now, navigate to the already created space with name **dev**
-4. In the **Service Marketplace**, search for __**Alert Notification**__ and click on the tile
-5. In the **Instances** page, click on **New Instance**, choose plan **Standard**, proceed without parameters and application assigned, enter some **Instance Name**
-6. Navigate to the newly created instance of Alert Notification
-7. From the **Service Keys** page, click on **Create Service Key**, enter some name and provide the following **Configuration Parameters**:
-```json
-{
-  "type": "BASIC"
-}
-```
-_Note: Leave the browser open, as you will need it in the next steps_
-
-### **3. Configure your application**
-1. Navigate to _Documents_ and clone a clean instance of the current repository using Git Bash and the following command:
-    ```bash
-    mkdir $(date | md5sum | cut -d ' ' -f1) && cd "$_" && git config --global http.sslVerify false && git clone [repository_clone_url]
-    ```
-    _Note: Leave the terminal open, as you might need it in the next steps_
-2. Open the **cloud-app** in your preferred Java editor – IntelliJ Idea or Eclipse  
-_**NOTE: Make sure that you open your clone of the repository**_
-3. Navigate to **application.properties** and populate:
-    ```properties
-       cloud_app.alert.notification.client.id={client_id}
-       cloud_app.alert.notification.client.secret={client_secret}
-    ```
-    **Hint:** Replace _{client_id}_ and _{client_secret}_ with the corresponding values from the service key you have created in section 2) step 7) above
-4. Navigate to **manifest.yaml** and replace _{ans-instance-name}_ with the name of your Alert Notification instance you have created in section 1) step 5) above
-5. Navigate to **AnsUtils.java** and populate the methods:
-```java
-   public static IAlertNotificationClient buildAnsClient(String clientId, String clientSeret);
-   public static CustomerResourceEvent convertToAnsEvent(CustomerEventDto eventDto);
-   private static AffectedCustomerResource buildCustomerResource();
-```
-**Hint:** Use the the appropriate builders provided from [Alert Notification Client library](https://github.com/SAP/clm-sl-alert-notification-client). Some default values are left in order to give you some hints on how to build some of the objects. 
-Furthermore, some instructions are provided in the source code itself.
-
-### **4. Set up Alert Notification configuration**
+### **2. Set up Alert Notification configuration**
 1. Navigate to **Export or Import** page of your Alert Notification instance.
 2. In the **Import** input, paste the JSON provided below & replace the placeholders as follows: 
     * _**{your_personal_email}**_ - replace it with your personal email, of course you can use your SAP email if you have easy access to it.
@@ -192,7 +152,77 @@ _Note: It is a predefined configuration that describes what happens when a parti
 ```
 _**Note: Shortly after importing the configuration you will receive an email about confirming the Email action. From the email navigate to the given URL and click on Confirm.**_
 
-### **5. Build and deploy your application**
+
+### **3. Push your custom events to Alert Notification service **
+It's high time to take a look what is the actual benefit from what we have done so far:
+
+#### Application lifecycle events
+Within the configuration we imported in section 4) step 2), we declared we want to receive all associated notifications via e-mail every time
+an application within the current space is started or stopped.   
+
+Once the application is deployed & started, verify you have just received a notification that informs you for this event ✈️
+
+#### Custom event
+In section 3) above, we have just configured the application to react on some custom situation with producing a custom event that is sent to Alert Notification.  
+
+Let's now induce that situation following the steps: 
+1. Within the Cloud Cockpit, navigate to your application **Overview** page, click on the available application route
+2. Click on **Produce Custom Event** tile
+    * (_**Optional**_) 2.a. If you have configured to use the received object in the source code, fulfill the properties with some demo values
+3. Click on **Send**
+
+Verify you have just received an e-mail that contains the exact values you have fulfilled in the form from step 2.a.) above or have configured in the source code ✈️
+
+#### Application availability test
+In the demo application, we have defined a custom endpoint to be used by the Cloud Controller for health check. Let's now simulate that our application is not 
+_"healthy"_ using the **Availability Check** tile within the application's UI. Turn the availability status off, so that our custom health endpoint will return a bad status code.
+In no time the Cloud Controller will find out that our application is unhealthy and very soon you'll have an event in your storage that informs for this situation. Preview
+the associated with application crash event by clicking on the **Stored events** tile in the main page of your application's UI.
+
+### Congrats - you've just completed this excercise!
+
+**[OPTIONAL] **
+
+### ** [Optional] 4. Instantiate Alert Notification and Initial Setup**
+1. Navigate to the subaccount named **trial**
+2. Navigate to **Members** tab (located on the left) and add the following user _sap_cp_eu10_ans@sap.com_ with role **Organization Auditor**. It's needed to pull lifecycle events for this subaccount.
+3. Now, navigate to the already created space with name **dev**
+4. In the **Service Marketplace**, search for __**Alert Notification**__ and click on the tile
+5. In the **Instances** page, click on **New Instance**, choose plan **Standard**, proceed without parameters and application assigned, enter some **Instance Name**
+6. Navigate to the newly created instance of Alert Notification
+7. From the **Service Keys** page, click on **Create Service Key**, enter some name and provide the following **Configuration Parameters**:
+```json
+{
+  "type": "BASIC"
+}
+```
+_Note: Leave the browser open, as you will need it in the next steps_
+
+### ** [Optional] 5. Configure your application**
+1. Navigate to _Documents_ and clone a clean instance of the current repository using Git Bash and the following command:
+    ```bash
+    mkdir $(date | md5sum | cut -d ' ' -f1) && cd "$_" && git config --global http.sslVerify false && git clone [repository_clone_url]
+    ```
+    _Note: Leave the terminal open, as you might need it in the next steps_
+2. Open the **cloud-app** in your preferred Java editor – IntelliJ Idea or Eclipse  
+_**NOTE: Make sure that you open your clone of the repository**_
+3. Navigate to **application.properties** and populate:
+    ```properties
+       cloud_app.alert.notification.client.id={client_id}
+       cloud_app.alert.notification.client.secret={client_secret}
+    ```
+    **Hint:** Replace _{client_id}_ and _{client_secret}_ with the corresponding values from the service key you have created in section 2) step 7) above
+4. Navigate to **manifest.yaml** and replace _{ans-instance-name}_ with the name of your Alert Notification instance you have created in section 1) step 5) above
+5. Navigate to **AnsUtils.java** and populate the methods:
+```java
+   public static IAlertNotificationClient buildAnsClient(String clientId, String clientSeret);
+   public static CustomerResourceEvent convertToAnsEvent(CustomerEventDto eventDto);
+   private static AffectedCustomerResource buildCustomerResource();
+```
+**Hint:** Use the the appropriate builders provided from [Alert Notification Client library](https://github.com/SAP/clm-sl-alert-notification-client). Some default values are left in order to give you some hints on how to build some of the objects. 
+Furthermore, some instructions are provided in the source code itself.
+
+### **[ Optional] 6. Build and deploy your application**
 1. In terminal, navigate to the home directory of your application
 2. Build it with the command:
     ```bash
@@ -224,33 +254,6 @@ b. Push from command line
     cf push
     ```
 
-### **4. Play around**
-It's high time to take a look what is the actual benefit from what we have done so far:
-
-#### Application lifecycle events
-Within the configuration we imported in section 4) step 2), we declared we want to receive all associated notifications via e-mail every time
-an application within the current space is started or stopped.   
-
-Once the application is deployed & started, verify you have just received a notification that informs you for this event ✈️
-
-#### Custom event
-In section 3) above, we have just configured the application to react on some custom situation with producing a custom event that is sent to Alert Notification.  
-
-Let's now induce that situation following the steps: 
-1. Within the Cloud Cockpit, navigate to your application **Overview** page, click on the available application route
-2. Click on **Produce Custom Event** tile
-    * (_**Optional**_) 2.a. If you have configured to use the received object in the source code, fulfill the properties with some demo values
-3. Click on **Send**
-
-Verify you have just received an e-mail that contains the exact values you have fulfilled in the form from step 2.a.) above or have configured in the source code ✈️
-
-#### Application availability test
-In the demo application, we have defined a custom endpoint to be used by the Cloud Controller for health check. Let's now simulate that our application is not 
-_"healthy"_ using the **Availability Check** tile within the application's UI. Turn the availability status off, so that our custom health endpoint will return a bad status code.
-In no time the Cloud Controller will find out that our application is unhealthy and very soon you'll have an event in your storage that informs for this situation. Preview
-the associated with application crash event by clicking on the **Stored events** tile in the main page of your application's UI.
-
-### Congrats - you've just completed the session!
 ---
  
 ### **Want to automate the reactions to your routine problems?**
@@ -261,8 +264,6 @@ For these and more complicated DevOps scenarios that occur everyday to each of u
 An easy integration to Alert Notification in a few steps is [available](https://help.sap.com/viewer/DRAFT/de3900c419f5492a8802274c17e07049/Cloud/en-US/684d09a964d14d07ac3d6b3a2754765a.html).
 
 
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
 
 
 ## Summary

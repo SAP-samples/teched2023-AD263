@@ -6,23 +6,23 @@ Logon to the AD263 Cloud ALM Tenant:
 
 Select the **tdct3ched1.accounts.ondemand.com** Identity Provider. Use the credentials as provided in Excercise 0.
 
-![](001.png)
+![](./images/001.png)
 
 After the logon the Launchpad of Cloud ALM is displayed
 
-![](002.png)
+![](./images/002.png)
 
 ## Check Landscape Management Service
 
 Navigate to Landscape Management from Cloud ALM Launchpad
 
-![](003.png)
+![](./images/003.png)
 
 Open and define a scope in the Scope Selector for Landscape Management Service
 
-![](004.png)
+![](./images/004.png)
 
-![](005.png)
+![](./images/005.png)
 
 1. Click: Toggle Filter Bar to show search criteria
 1. Select Managed Object Type: Service, System
@@ -34,29 +34,29 @@ In the dashboard loaded you see an overview of all systems and services availabl
 
 Continue the exercise by selecting the tile SAP BTP Cloud Foundry environment
 
-![](006.png)
+![](./images/006.png)
 
 Select the SAP BTP CF AD263-XXX ***(replace XXX with your group number)*** service where your Demo Application is deployed
 
-![](007.png)
+![](./images/007.png)
 
 Please review the details of the service
 
-![](008.png)
+![](./images/008.png)
 
 ## Check Health Monitoring for SAP BTP CF Demo Application
 
 Navigate to Health Monitoring from SAP Cloud ALM Launchpad
 
-![](009.png)
+![](./images/009.png)
 
 As part of the preparation of your managed SAP BTP CF service the Java application has been instrumented with the OpenTelemetry Java agent and the SAP OpenTelemetry Agent Extensions. As such a set of technical KPI’s for this application is automatically collected for the application to monitor the status of the application.
 
 Open the scope selection and define a scope to show only relevant managed objects for this excercise:
 
-![](010.png)
+![](./images/010.png)
 
-![](011.png)
+![](./images/011.png)
 
 1. Click: Toggle Filter Bar
 1. Select Service Type: SAP BTP, Cloud Foundry environment
@@ -67,23 +67,23 @@ Open the scope selection and define a scope to show only relevant managed object
 
 As result you should see the entry dashboard for Health Monitoring only with one tile for SAP BTP, Cloud Foundry environment and one service.
 
-![](012.png)
+![](./images/012.png)
 
 Navigate to SAP BTP Cloud Foundry environment and select the service AD263-XXX ***(replace XXX with your group number)*** where your Demo Application is deployed
 
-![](013.png)
+![](./images/013.png)
 
 In the following screen you can see all metrics collected for the health status of the application. For details each metric can be evaluated further and history data for the metric can be shown
 
-![](014.png)
+![](./images/014.png)
 
 If multiple applications or multiple instances are deployed then for each application/instance a separate measurement is visible. For the application Teched2023Incident (this is the application name as provided in the application instrumentation) please review the history
 
-![](015.png)
+![](./images/015.png)
 
 History Chart can reviewed for the metric
 
-![](016.png)
+![](./images/016.png)
 
 Please check other metrics for this application. All metrics shown here are available by default and are provided as part of the SAP Otel extension package as automatic instrumentation. There is no development needed to enable those metrics.
 
@@ -91,11 +91,11 @@ Please check other metrics for this application. All metrics shown here are avai
 
 Navigate to Integration & Exception from Cloud ALM Launchpad
 
-![](017.png)
+![](./images/017.png)
 
 The application opens the first time with a scope selection. The scope selected will be stored for your user and next time you open the application the same scope is automatically used
 
-![](018.png)
+![](./images/018.png)
 
 1. Opens the scope selector (at first application start it is opened automatically)
 1. Managed Component Selection: Select Business Services, Services and Systems
@@ -106,17 +106,17 @@ The application opens the first time with a scope selection. The scope selected 
 
 The application starts with an overview page showing the status of all managed components in your scope
 
-![](019.png)
+![](./images/019.png)
 
 As AD263-XXX ***(replace XXX with your group number)*** was not yet used or configured for Integration and Exception Monitoring the configuration for this service needs to be started
 
-![](020.png)
+![](./images/020.png)
 
 1. Click on the configuration button
 1. Select your BTP CF service AD263-XXX ***(replace XXX with your group number)***<br>
 Navigate to the Monitoring configuration of your service
-![](021.png)<br>
-![](022.png)
+![](./images/021.png)<br>
+![](./images/022.png)
 
 Toggle the Active Switch for Category Java Application Logs and click save. This enables the data collection of Java Application logs for all customer created Java application in this BTP CF subaccount. The configuration is transferred to the subaccount and data collection and transfer of data starts within the next minute.
 
@@ -124,11 +124,11 @@ Without this toggle switch set to active, even though the application is instrum
 
 Switch view to Events settings
 
-![](023.png)
+![](./images/023.png)
 
 Add new Event for `Erroneous Java Application`
 
-![](024.png)
+![](./images/024.png)
 
 Activate `Create Alert` as Event Action and Save
 
@@ -136,7 +136,7 @@ With this setting each time new exceptions are detected in your custom applicati
 
 ## Trigger Exception
 
-![](025.png)
+![](./images/025.png)
 
 In your BTP space a sample java application has been deployed, which can create exceptions on user requests. This is a mock application to simulate exception creations from customer developed PaaS applications.
 
@@ -146,14 +146,14 @@ In your BTP space a sample java application has been deployed, which can create 
 
 Navigate to the Home of Integration & Exception Monitoring
 
-![](026.png)
+![](./images/026.png)
 
 1. Click on the Refresh Indicator
 1. Click Refresh to manually refresh the current page (by default the current view is refreshed every 5 minutes automatically). The data transfer from your application to Cloud ALM can take up to two minutes
 1. Click on the Exceptions to show the exception details<br>
-![](027.png)
+![](./images/027.png)
 1. Click on one line to review details of a single exception<br>
-![](028.png)
+![](./images/028.png)
 1. Review the Collection Context
 1. Review the Correlation Context
 1. Review the Process Arguments
@@ -161,13 +161,14 @@ Navigate to the Home of Integration & Exception Monitoring
 
 ## Review Alert for the Exception in Cloud ALM
 
-![](029.png)
+![](./images/029.png)
 
 1. Click on alerting to open the alert page
 1. If the list is still empty refresh the view, select one alert
 1. Review the alert details
 
 ## Summary
+
 - You have now access to the Cloud ALM tenant as central observability solution for this Hands-on session.
 - Your managed customer created Java application deployed in BTP CF is available and configured for monitoring in Heralth Monitoring ansd Integration & Exception Monitoring in SAP Cloud ALM
 - Exceptions from the Demo Application are creating events and alerts in SAP Cloud ALM

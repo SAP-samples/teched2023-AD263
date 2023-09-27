@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/11653294/64466233-7cd17480-d119-11e9-8965-e036c1e23c9a.png" alt="CF logo" height="100" align="left"/>
 
-## Introduction to Alert Notification service! 
+## Introduction to Alert Notification service!  
 [![Alert Notification Internal Pages](https://img.shields.io/badge/Instant%20Problem%20Notifications-Alert%20Notification-fabc02.svg)](https://github.wdf.sap.corp/pages/sl-hybrid/ans/)
 [![Automation Pilot Internal Pages](https://img.shields.io/badge/Automatic%20Reactions-Automation%20Pilot-03cdff.svg)](https://github.wdf.sap.corp/pages/sl-actions/landing-page/) 
 

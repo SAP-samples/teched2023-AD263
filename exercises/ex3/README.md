@@ -113,3 +113,4 @@ Your newly created ticket shall appear in the list of tickets in the TechEd2023I
 - The connectivity between Cloud ALM the your customer ticket system (the Demo Application for this Hands-on Session will act as mock application for this purpose) has been established
 - Tickets can be manually created from Cloud ALM in the Ticket system
 
+Continue to - [Exercise 4](../ex4/README.md)

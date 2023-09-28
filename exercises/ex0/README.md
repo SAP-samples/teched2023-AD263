@@ -1,5 +1,24 @@
 # Exercise 0 – Getting Started
 
+## Find your group Number
+
+During this Teched exercise, you will use a Java application deploy it into an SAP BTP subaccount. You will then configure the Integration and Exception Monitoring this Java application in a shared SAP Cloud ALM. To avoid that it comes to conflicts between two applications, it is very important that you know your place number and execute the exercise using this place number. Please check the sign on your table. The number on this sign is your place number.
+
+![](./images/overview.png)
+
+**Please replace the XXX in the excercises always with your place number!**
+
+### Login Information
+
+Please replace the _**XXX**_ in the user name with your place number (e.g. AD263_001@education.cloud.sap).
+
+In the SAP BTP Cockpit, you will only see the subaccount that is relevant for you, based on your place number.
+
+| Application | User ID | Password | URL |
+|---|---|---|---|
+| SAP Cloud ALM URL | AD263_**XXX**@education.cloud.sap | coming soon | [SAP Cloud ALM](https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad) |
+| SAP BTP Cockpit | AD263_**XXX**@education.cloud.sap | coming soon | [BTP Global Account](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd) |
+
 ## Connect to SAP BTP CF Subaccount
 
 To access all BTP accounts please logon with the credentials to the BTP Global Account for TechEd 2023 Hands-On Sessions:
@@ -10,7 +29,6 @@ Your trainer will provide:
 
 ```
 Username: <AD263-XXX@education.cloud.sap>
-Password: <the password is handed out during the session by your trainer)
 ```
 
 > [!IMPORTANT]
@@ -28,12 +46,38 @@ After successful logon you see SAP BTP Cockpit global account overview two diffe
 
 Select Subaccount: AD263-XXX ***(replace XXX with your group number)***
 
-## Check Demo Application (Optional)
+## Demo Application for this excercise
+
+To demonstrate the different functionality a demo application was deployed to your group subaccount AD263-XXX ***(replace XXX with your group number)***. This demo application will service two different purposed:
+
+1. Incident Management
+	- Display incidents and incident details
+	- provide API to create incidents remotely (e.g. from Cloud ALM or from Alert Notification Service)
+	- **Note:** In customer environments incident management can be handled by a broad variety of Incident Management Tools provided by different vendors. In this hands-on session we will use this mock application to simulate an Incident Management tool with limited functionality. Please note that SAP does not offer or recommend any specific solution.
+2. Demonstrate instrumentation of customer applications for SAP Cloud ALM and be able to raise exceptions on demand for demo purposes
+
+To access the demo application please open the space AD263-XXX ***(replace XXX with your group number)***.
+![](./images/open_space.png)
+
+Select the frontend for application teched-incident-demo
+![](./images/open_app_frontend.png)
+
+By clicking on the application route the demo application in your space will open. You will also need this URL for further purposes. So please copy the URL into a notepad of your laptop.
+![](./images/open_app_url.png)
+
+The demo app will open
+![](./images/demo_app_overview.png)
+1. In this area incidents are displayed and navigation to incident details is possible
+2. With the button Create Exception you can manually trigger exception generation from this application
+
+Keep the demo app open in a separate tab of your browser. During this excercise we will come back here multiple times.
+
+## Check Cloud ALM instrumentation of the Demo Application (Optional)
 
 The complete procedure how to instrument customer developed applications is described in the SAP Cloud ALM Expert Portal
 <https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/data-collection-infrastructure.html>
 
-See also the Hands-On XP261 Observability for Your SAP BTP Applications with SAP Cloud ALM for a step-by-step explanation.
+See also the Hands-On XP261 Observability for Your SAP BTP Applications with SAP Cloud ALM for a step-by-step explanation. In our example we will use the instrumentation for java backend service.
 
 ### Check Connectivity from SAP BTP CF to SAP Cloud ALM (optional)
 
@@ -59,23 +103,24 @@ To enable data collection in a custom application the Open Telemetry Java Agent 
 ![](./images/open_space.png)
 
 Navigate to the the Java Backend Service of your demo application
-![](./images/open_app.png)
+![](./images/open_app_backend.png)
 
 The instrumentation is done via user provided variable JB\P_CONFIG\_JAVA\_OPTS
 ![](./images/open_app_instrumentation.png)
 
-With the given parameters the instrumentation of the application is done. With the enablement of the SAP Otel Extensions important technical KPIs are automatically collected and transfered to SAP Cloud ALM
+With the given parameters the instrumentation of the application is done. With the enablement of the SAP Otel Extensions important technical KPIs are automatically collected and transfered to SAP Cloud ALM.
 
 ```
-javaagent:BOOT-INF/lib/opentelemetry-javaagent-1.29.0.jar -Dotel.javaagent.enabled=true: enables the Open Telemetry Agent
+javaagent:BOOT-INF/lib/opentelemetry-javaagent-1.29.0.jar 
+-Dotel.javaagent.enabled=true: enables the Open Telemetry Agent
 -Dotel.javaagent.extensions=BOOT-INF/lib/otel-agent-ext-java-1.5.4.jar: includes the SAP Otel Extension library
 -Dotel.resource.attributes=account=AD263-XXX,calmTenantId=<guid>: describes space name and space id of your BTP CF account
--Dotel.service.name=TechEd2023Incident: describes the name of the application to be shown in Cloud ALM
+-Dotel.service.name=teched-incident-demo: describes the name of the application to be shown in Cloud ALM
 
 ```
 
 ## Trigger Exception from Demo Application
-Navigate to your BTP subaccount AD263-XXX
+Navigate to your BTP subaccount AD263-XXX ***(replace XXX with your group number)***
 
 ![ref1]
 
@@ -87,27 +132,17 @@ Open Space AD263-XXX
 
 ![](./images/007.png)
 
-Here you see 3 deployed applications
+Select the frontend for application teched-incident-demo
+![](./images/open_app_frontend.png)
 
-![](./images/008.png)
+By clicking on the application route the demo application in your space will open.
+![](./images/open_app_url.png)
 
-- tech-ed-svc: java backing service
-- wa-approuter: managed approuter
-- waapp: UI5 frontend
+Please click the button `Create Exception` to raise some example exceptions from this Application.
+![](./images/demo_app_trigger_exception.png)
 
-Navigate to the UI5 frontend application
-
-![](./images/009.png)
-
-Klick on the link to open the Incident Mock Demo application
-
-![](./images/010.png)
-
-In your BTP space a sample java application has been deployed, which can create exceptions on user requests. This is a mock application to simulate exception creations from customer developed PaaS applications.
-
-- Please click the button `Create Exception` to raise some example exceptions from this Application
-
-The very same application is also used as mock ticketing system, which means tickets can be created in the application by a remote call and the ticket can be shown here. Please keep the application window open for the remainder of this hands-on session.
+After triggering the exception a toast confirming the result is shown.
+![](./images/demo_app_success_exception.png)
 
 > [!NOTE]
 > How exceptions are raised in the customer applications: 
@@ -121,10 +156,6 @@ import org.slf4j.LoggerFactory;
 Logger logger = LoggerFactory.getLogger(loggerName);
 logger.error(message)
 ```
-
-Note: Furthermore, this application can display incidents created by other tools. In customer environments incident management can be handled by a broad variety of Incident Management Tools provided by different vendors. In this hands-on session we will use this mock application to simulate an Incident Management tool with limited functionality. Please note that SAP does not offer or recommend any specific solution.
-
-To learn more about how to develop and instrument your customer applications please see session “XP261 – Observability for Your SAP BTP Applications with SAP Cloud ALM”
 
 ## Review Exception from Demo Application in Cloud Logging Service
 
@@ -157,3 +188,5 @@ Navigate to your subaccount AD263-XXX ***(replace XXX with your group number)***
 - You have now access to the Demo Application for this Hands-on session.
 - You are able to trigger exceptions on demand to simulate erroneous behavior of a customer developed BTP CF Java application
 - You are able to view incidents created by SAP Cloud ALM or SAP BTP Alert Notification Service
+
+Continue to - [Exercise 1](../ex1/README.md)

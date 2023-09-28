@@ -1,4 +1,4 @@
-# Exercise 2 - Prepare SAP Cloud ALM
+# Exercise 2 - Prepare and Configure SAP Cloud ALM
 
 Logon to the AD263 Cloud ALM Tenant:
 
@@ -134,13 +134,22 @@ Activate `Create Alert` as Event Action and Save
 
 With this setting each time new exceptions are detected in your custom application a new alert is created in the alert inbox for Cloud ALM.
 
-## Trigger Exception
+## Trigger Exception from Demo Application
 
-![](./images/025.png)
+Navigate to your BTP subaccount AD263-XXX ***(replace XXX with your group number)*** and navigate to Cloud Foundry -> Spaces
+![](./images/open_subaccount.png)
 
-In your BTP space a sample java application has been deployed, which can create exceptions on user requests. This is a mock application to simulate exception creations from customer developed PaaS applications.
+Open Space AD263-XXX
+![](./images/open_space.png)
 
-- Please click the button Create Exception to raise some example exceptions from this Application
+Select the frontend for application teched-incident-demo
+![](./images/open_app_frontend.png)
+
+By clicking on the application route the demo application in your space will open.
+![](./images/open_app_url.png)
+
+Please click the button `Create Exception` to raise some example exceptions from this Application.
+![](./images/demo_app_trigger_exception.png)
 
 ## Review Exception in Cloud ALM
 
@@ -173,3 +182,4 @@ Navigate to the Home of Integration & Exception Monitoring
 - Your managed customer created Java application deployed in BTP CF is available and configured for monitoring in Heralth Monitoring ansd Integration & Exception Monitoring in SAP Cloud ALM
 - Exceptions from the Demo Application are creating events and alerts in SAP Cloud ALM
 
+ontinue to - [Exercise 3](../ex3/README.md)

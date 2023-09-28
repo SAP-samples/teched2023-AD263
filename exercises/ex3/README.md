@@ -30,7 +30,7 @@ The URL mentioned in Application Routes is the target URL needed to create the d
 
 Save your Destination
 
-### Test Conectivity
+### Test Connectivity
 
 Click ![](./images/003.png)
 

@@ -19,7 +19,7 @@ Let's do it...
 ---
 
 ### **1. Access Alert Notification service**
-1. Visit your SAP BTP Accoiunt and access the service "Alert Notification service for SAP BTP"
+1. Visit your SAP BTP Account and access the service "Alert Notification service for SAP BTP"
   
 
 ### **2. Set up Alert Notification configuration**

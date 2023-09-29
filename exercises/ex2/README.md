@@ -40,7 +40,7 @@ Select the SAP BTP CF AD263-XXX ***(replace XXX with your group number)*** servi
 
 ![](./images/007.png)
 
-Please review the details of the service
+Please review the details of the service. Please verify the Subdomain and Subaccount ID shown here and in in the BTP Cockpit are identical.
 
 ![](./images/008.png)
 

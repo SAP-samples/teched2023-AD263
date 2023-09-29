@@ -44,14 +44,14 @@ To demonstrate the different functionalities a demo application was deployed to 
 
 1. Incident Management
 	- Display incidents and incident details
-	- provide API to create incidents remotely (e.g. from Cloud ALM or from Alert Notification Service)
+	- The application provides a create incident API. SAP Cloud ALM and ANS call this API to create incidents
 	- **Note:** In customer environments incident management can be handled by a broad variety of Incident Management Tools provided by different vendors. In this hands-on session we will use this mock application to simulate an Incident Management tool with limited functionality. Please note that SAP does not offer or recommend any specific solution.
 2. Demonstrate instrumentation of customer applications for SAP Cloud ALM and be able to raise exceptions on demand for demo purposes
 
 To access the demo application please open the space AD263-XXX ***(replace XXX with your group number)***.
 ![](./images/open_space.png)
 
-Select the frontend for application teched-incident-demo
+Select teched-incident-demo-ui
 ![](./images/open_app_frontend.png)
 
 By clicking on the application route the demo application in your space will open. You will also need this URL for further purposes. So please copy the URL into a notepad of your laptop.
@@ -94,10 +94,10 @@ Please make sure connection check is successful. The response â€œ404: Not foundâ
 To enable data collection in a custom application the Open Telemetry Java Agent and the SAP Otel Extensions must be instrumented in the application. In your demo account this has been already done. To see the configuration please open the Cloud Foundry space where the applications are deployed
 ![](./images/open_space.png)
 
-Navigate to the the Java Backend Service of your demo application
+Select teched-incident-demo-srv
 ![](./images/open_app_backend.png)
 
-The instrumentation is done via user provided variable JB\P_CONFIG\_JAVA\_OPTS
+Select User provided variables. The instrumentation is done via user provided variable JB\P_CONFIG\_JAVA\_OPTS
 ![](./images/open_app_instrumentation.png)
 
 With the given parameters the instrumentation of the application is done. With the enablement of the SAP Otel Extensions important technical KPIs are automatically collected and transfered to SAP Cloud ALM.
@@ -112,19 +112,14 @@ javaagent:BOOT-INF/lib/opentelemetry-javaagent-1.29.0.jar
 ```
 
 ## Trigger Exception from Demo Application
-Navigate to your BTP subaccount AD263-XXX ***(replace XXX with your group number)***
 
-![ref1]
-
-Navigate to Cloud Foundry -> Spaces
-
-![](./images/006.png)
+Navigate to your BTP subaccount AD263-XXX ***(replace XXX with your group number)*** and navigate to Cloud Foundry -> Spaces
+![](./images/open_subaccount.png)
 
 Open Space AD263-XXX
+![](./images/open_space.png)
 
-![](./images/007.png)
-
-Select the frontend for application teched-incident-demo
+Select teched-incident-demo-ui
 ![](./images/open_app_frontend.png)
 
 By clicking on the application route the demo application in your space will open.
@@ -137,9 +132,7 @@ After triggering the exception a toast confirming the result is shown.
 ![](./images/demo_app_success_exception.png)
 
 > [!NOTE]
-> How exceptions are raised in the customer applications: 
-
-Exceptions in this sample application are created with slf4j logging facility. The generic approach to raise an exception is done as shown in the code snippet below
+> Exceptions in this sample application are created with slf4j logging facility. The generic approach to raise an exception is done as shown in the code snippet below
 
 ```
 import org.slf4j.Logger;

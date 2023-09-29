@@ -49,6 +49,7 @@ Navigate to “External API Management”
 ![](./images/005.png)
 
 Create a new Webhook ![](./images/006.png) AD263-XXX\_Webhook ***(replace XXX with your group number)***
+![](./images/create_webhook.png)
 
 ```
 Name: AD263-XXX_Webhook (replace XXX with your group number)
@@ -65,7 +66,8 @@ Save
 
 ## Create Subscription
 
-Create a new Subscription ![](./images/008.png) AD263-XXX\_Ticket ***(replace XXX with your group number)****
+Create a new Subscription ![](./images/008.png) AD263-XXX\_Ticket ***(replace XXX with your group number)***
+![](./images/create_subscription.png)
 
 ```
 Name: AD263-XXX_Ticket (replace XXX with your group number)

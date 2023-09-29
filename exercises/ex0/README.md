@@ -149,7 +149,8 @@ The log messages created by the sample application are instrumented to send the 
 
 <a name="_toc146285036"></a>To show the generated exceptions logon with the credentials to your subaccount AD263-XXX of the the BTP Global Account for TechEd 2023 Hands-On Sessions:
 
-<https://emea.cockpit.btp.cloud.sap/cockpit#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd>
+<https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd><br>
+![](./images/002.png)
 
 Navigate to your subaccount AD263-XXX ***(replace XXX with your group number)***
 ![](./images/011.png)

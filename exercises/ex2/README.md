@@ -77,7 +77,7 @@ In the following screen you can see all metrics collected for the health status 
 
 ![](./images/014.png)
 
-If multiple applications or multiple instances are deployed then for each application/instance a separate measurement is visible. For the application Teched2023Incident (this is the application name as provided in the application instrumentation) please review the history
+If multiple applications or multiple instances are deployed then for each application/instance a separate measurement is visible. For the application teched-incident-demo (this is the application name as provided in the application instrumentation) please review the history
 
 ![](./images/015.png)
 

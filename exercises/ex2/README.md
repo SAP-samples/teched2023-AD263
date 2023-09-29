@@ -1,6 +1,6 @@
 # Exercise 2 - Prepare and Configure SAP Cloud ALM
 
-Logon to the AD263 Cloud ALM Tenant:
+Logon to the AD263 SAP Cloud ALM Tenant:
 
 <https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad>
 
@@ -8,13 +8,13 @@ Select the **tdct3ched1.accounts.ondemand.com** Identity Provider. Use the cre
 
 ![](./images/001.png)
 
-After the logon the Launchpad of Cloud ALM is displayed
+After the logon the Launchpad of SAP Cloud ALM is displayed
 
 ![](./images/002.png)
 
 ## Check Landscape Management Service
 
-Navigate to Landscape Management from Cloud ALM Launchpad
+Navigate to Landscape Management from SAP Cloud ALM Launchpad
 
 ![](./images/003.png)
 
@@ -81,7 +81,7 @@ If multiple applications or multiple instances are deployed then for each applic
 
 ![](./images/015.png)
 
-History Chart can reviewed for the metric
+History Chart can be reviewed for the metric
 
 ![](./images/016.png)
 
@@ -89,7 +89,7 @@ Please check other metrics for this application. All metrics shown here are avai
 
 ## Configure Integration & Exception Monitoring
 
-Navigate to Integration & Exception from Cloud ALM Launchpad
+Navigate to Integration & Exception from SAP Cloud ALM Launchpad
 
 ![](./images/017.png)
 
@@ -120,7 +120,7 @@ Navigate to the Monitoring configuration of your service
 
 Toggle the Active Switch for Category Java Application Logs and click save. This enables the data collection of Java Application logs for all customer created Java application in this BTP CF subaccount. The configuration is transferred to the subaccount and data collection and transfer of data starts within the next minute.
 
-Without this toggle switch set to active, even though the application is instrumented and might create errors, the errors are not transferred to SAP Cloud ALM. This mechanism is in place to ensure that only data for metrics which are used in SAP Cloud ALM are collected and transferred, especially as such transfer happens also across data centers as one Cloud ALM tenant manages all customer services independent of the service location.
+Without this toggle switch set to active, even though the application is instrumented and might create errors, the errors are not transferred to SAP Cloud ALM. This mechanism is in place to ensure that only data for metrics which are used in SAP Cloud ALM are collected and transferred, especially as such transfer happens also across data centers as one SAP Cloud ALM tenant manages all customer services independent of the service location.
 
 Switch view to Events settings
 
@@ -132,7 +132,7 @@ Add new Event for `Erroneous Java Application`
 
 Activate `Create Alert` as Event Action and Save
 
-With this setting each time new exceptions are detected in your custom application a new alert is created in the alert inbox for Cloud ALM.
+With this setting each time new exceptions are detected in your custom application a new alert is created in the alert inbox for SAP Cloud ALM.
 
 ## Trigger Exception from Demo Application
 
@@ -142,7 +142,7 @@ Navigate to your BTP subaccount AD263-XXX ***(replace XXX with your group number
 Open Space AD263-XXX
 ![](./images/open_space.png)
 
-Select the frontend for application teched-incident-demo
+Select teched-incident-demo-ui
 ![](./images/open_app_frontend.png)
 
 By clicking on the application route the demo application in your space will open.
@@ -151,14 +151,14 @@ By clicking on the application route the demo application in your space will ope
 Please click the button `Create Exception` to raise some example exceptions from this Application.
 ![](./images/demo_app_trigger_exception.png)
 
-## Review Exception in Cloud ALM
+## Review Exception in SAP Cloud ALM
 
 Navigate to the Home of Integration & Exception Monitoring
 
 ![](./images/026.png)
 
 1. Click on the Refresh Indicator
-1. Click Refresh to manually refresh the current page (by default the current view is refreshed every 5 minutes automatically). The data transfer from your application to Cloud ALM can take up to two minutes
+1. Click Refresh to manually refresh the current page (by default the current view is refreshed every 5 minutes automatically). The data transfer from your application to SAP Cloud ALM can take up to two minutes
 1. Click on the Exceptions to show the exception details<br>
 ![](./images/027.png)
 1. Click on one line to review details of a single exception<br>
@@ -168,7 +168,7 @@ Navigate to the Home of Integration & Exception Monitoring
 1. Review the Process Arguments
 1. Navigate to Cloud Logging Service to see the details in local dashboard
 
-## Review Alert for the Exception in Cloud ALM
+## Review Alert for the Exception in SAP Cloud ALM
 
 ![](./images/029.png)
 

@@ -4,10 +4,6 @@ SAP Cloud ALM does not offer a build-in Incident Management functionality. To en
 
 ## Create Destination to your Incident Management Ticket System
 
-### Logon to BTP Cockpit subaccount where your SAP Cloud ALM is deployed
-
-Navigate to Connectivity->Destinations: (direct link) <https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/731a2c70-457e-466c-a810-d32cf775c958/destinations>
-
 ### Create a Destination to your Incident Management
 
 Find the correct URL for the Incident Application deployed in your subaccount, please logon to your BTP Subaccount AD263-XXX ***(replace XXX with your group number)*** and navigate to Cloud Foundry -> Spaces -> AD263-XXX -> Applications -> teched-incident-demo-ui 
@@ -15,6 +11,11 @@ Find the correct URL for the Incident Application deployed in your subaccount, p
 ![](./images/open_app_url.png)
 
 Copy the URL mentioned in Application Routes to notepad.
+
+
+Open the subaccount AD263 ***(the central subaccount where Cloud ALM is deployed)*** and maintain the destination from Cloud ALM to the Incident Demo Application running in your AD263-XXX account.
+Navigate to Connectivity->Destinations: (direct link) <https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/731a2c70-457e-466c-a810-d32cf775c958/destinations>
+![](./images/create_destination.png)
 
 Now create the destination as below:
 
@@ -105,6 +106,10 @@ Select your Subscription AD263-XXX\_Ticket ***(replace XXX with your group numbe
 If a success message Incident INC<XXXXX> created appears, then your ticket integration was successfully configured.
 
 You can also see the incident in the ticket section of the alert details.
+![](./images/alert_ticket.png)
+
+Please open the alert action log and see the log message about the manual ticket creation. This can be used to track, which user and at which time the action was manually performed in SAP Cloud ALM.
+![](./images/alert_action_log.png)
 
 ## Review Ticket in Ticket Demo Application
 

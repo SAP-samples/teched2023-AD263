@@ -6,6 +6,8 @@ Navigate to Integration & Exception from Cloud ALM Launchpad
 
 ![](./images/001.png)
 
+Or use the direct link: [Integration & Exception in SAP Cloud ALM](https://ad263-ptnlz9xc.eu10.alm.cloud.sap/shell/run?sap-ui-app-id=com.sap.crun.imapp.ui#/Home)
+
 ![](./images/002.png)
 
 1. Click on the configuration button
@@ -46,10 +48,19 @@ Navigate to the Home of Integration & Exception Monitoring
 
 1. Click on the Refresh Indicator
 1. Click Refresh to manually refresh the current page (by default the current view is refreshed every 5 minutes automatically). The data transfer from your application to Cloud ALM can take up to two minutes
-1. Click on the Exceptions to show the exception details<br>
+1. Make sure the new exceptions are already availabe here<br>
 ![](./images/027.png)
-1. Click on one line to review details of a single exception<br>
-![](./images/028.png)
+
+
+Select Open Alerts ![](./images/011.png)
+![](./images/alert_action_log.png)
+
+1. Open Alert Inbox
+1. Make sure a new alert was created since the last exceptions were received, Wait and refresh if the alert is not yet created. Select the new alert
+1. Show action log
+1. Here you see now, that the ticket was created automatically. You can also retrieve 
+
+
 
 
 ## Review Ticket in Ticket Demo Application

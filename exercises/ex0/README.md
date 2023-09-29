@@ -2,11 +2,11 @@
 
 ## Find your group Number
 
-During this Teched exercise, you will use a Java application deploy it into an SAP BTP subaccount. You will then configure the Integration and Exception Monitoring this Java application in a shared SAP Cloud ALM. To avoid that it comes to conflicts between two applications, it is very important that you know your place number and execute the exercise using this place number. Please check the sign on your table. The number on this sign is your place number.
+During this Teched exercise, you will use a Java application deployed into an SAP BTP subaccount. You will then configure Integration and Exception Monitoring for this Java application in a shared SAP Cloud ALM. Execute the exercises only with your assigned  number to avoid conflicts. You can find your assigned number on the sign on your table.
 
 ![](./images/overview.png)
 
-**Please replace the XXX in the excercises always with your place number!**
+**Please replace the XXX in the excercises always with your assigned number!**
 
 ### Login Information
 
@@ -21,21 +21,13 @@ In the SAP BTP Cockpit, you will only see the subaccount that is relevant for yo
 
 ## Connect to SAP BTP CF Subaccount
 
-To access all BTP accounts please logon with the credentials to the BTP Global Account for TechEd 2023 Hands-On Sessions:
-
-<https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/>
-
-Your trainer will provide:
-
-```
-Username: <AD263-XXX@education.cloud.sap>
-```
+lick on the BTP Global Account Link and enter username and password
 
 > [!IMPORTANT]
 > XXX is your group number. Please replace in all occurences during the excercises
 
 Please connect via browser to the provided URL and use your credentials to log in.
-![](./images/001.png)
+![](./images/logon.btp.png)
 
 After successful logon you see SAP BTP Cockpit global account overview two different subaccounts:
 
@@ -48,7 +40,7 @@ Select Subaccount: AD263-XXX ***(replace XXX with your group number)***
 
 ## Demo Application for this excercise
 
-To demonstrate the different functionality a demo application was deployed to your group subaccount AD263-XXX ***(replace XXX with your group number)***. This demo application will service two different purposed:
+To demonstrate the different functionalities a demo application was deployed to your group subaccount AD263-XXX ***(replace XXX with your group number)***. This demo application will service two different purposes:
 
 1. Incident Management
 	- Display incidents and incident details

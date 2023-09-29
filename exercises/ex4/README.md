@@ -29,7 +29,7 @@ Navigate to your BTP subaccount AD263-XXX ***(replace XXX with your group number
 Open Space AD263-XXX
 ![](./images/open_space.png)
 
-Select the frontend for application teched-incident-demo
+Select teched-incident-demo-ui
 ![](./images/open_app_frontend.png)
 
 By clicking on the application route the demo application in your space will open.
@@ -38,7 +38,7 @@ By clicking on the application route the demo application in your space will ope
 Please click the button `Create Exception` to raise some example exceptions from this Application.
 ![](./images/demo_app_trigger_exception.png)
 
-## Review Exception in Cloud ALM
+## Review Exception in SAP Cloud ALM
 
 Navigate to the Home of Integration & Exception Monitoring
 
@@ -50,21 +50,10 @@ Navigate to the Home of Integration & Exception Monitoring
 ![](./images/027.png)
 1. Click on one line to review details of a single exception<br>
 ![](./images/028.png)
-1. Review the Collection Context
-1. Review the Correlation Context
-1. Review the Process Arguments
-1. Navigate to Cloud Logging Service to see the details in local dashboard
-## Review Exception in Cloud ALM
-Navigate to the Home of Integration & Exception Monitoring
 
-![](./images/006.png)
 
-1. Click on the Refresh Indicator
-1. Click Refresh to manually refresh the current page (by default the current view is refreshed every 5 minutes automatically). The data transfer from your application to Cloud ALM can take up to two minutes
-1. Click on the Exceptions to show the exception details
-
-![](./images/007.png)
 ## Review Ticket in Ticket Demo Application
+
 Navigate to your BTP subaccount AD263-XXX ***(replace XXX with your group number)*** and navigate to Cloud Foundry -> Spaces
 ![](./images/open_subaccount.png)
 

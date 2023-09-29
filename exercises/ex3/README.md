@@ -26,7 +26,6 @@ Type: HTTP
 Description: Incident for AD263-XXX (replace XXX with your group number)
 Proxy Type: Internet
 Authentication: NoAuthentication
-Use default JDK truststore: yes
 ```
 
 ![](./images/001.png)

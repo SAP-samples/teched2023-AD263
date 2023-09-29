@@ -113,7 +113,7 @@ As AD263-XXX ***(replace XXX with your group number)*** was not yet used or conf
 ![](./images/020.png)
 
 1. Click on the configuration button
-1. Select your BTP CF service AD263-XXX ***(replace XXX with your group number)***<br>
+1. Select your BTP CF service AD263-XXX ***(replace XXX with your group number)*** and click the service name<br>
 Navigate to the Monitoring configuration of your service
 ![](./images/021.png)<br>
 ![](./images/022.png)
@@ -179,7 +179,7 @@ Navigate to the Home of Integration & Exception Monitoring
 ## Summary
 
 - You have now access to the Cloud ALM tenant as central observability solution for this Hands-on session.
-- Your managed customer created Java application deployed in BTP CF is available and configured for monitoring in Heralth Monitoring ansd Integration & Exception Monitoring in SAP Cloud ALM
+- Your managed customer created Java application deployed in BTP CF is available and configured for monitoring in Health Monitoring and Integration & Exception Monitoring in SAP Cloud ALM
 - Exceptions from the Demo Application are creating events and alerts in SAP Cloud ALM
 
-ontinue to - [Exercise 3](../ex3/README.md)
+Continue to - [Exercise 3](../ex3/README.md)

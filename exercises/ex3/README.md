@@ -8,7 +8,15 @@ SAP Cloud ALM does not offer a build-in Incident Management functionality. To en
 
 Navigate to Connectivity->Destinations: (direct link) <https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/731a2c70-457e-466c-a810-d32cf775c958/destinations>
 
-### Create a new Destination as follows
+### Create a Destination to your Incident Management
+
+Find the correct URL for the Incident Application deployed in your subaccount, please logon to your BTP Subaccount AD263-XXX ***(replace XXX with your group number)*** and navigate to Cloud Foundry -> Spaces -> AD263-XXX -> Applications -> teched-incident-demo-ui 
+
+![](./images/open_app_url.png)
+
+Copy the URL mentioned in Application Routes to notepad.
+
+Now create the destination as below:
 
 ```
 Destination Configuration: Blank Template
@@ -22,21 +30,15 @@ Use default JDK truststore: yes
 
 ![](./images/001.png)
 
-To find the correct URL for the Incident Application deployed in your subaccount, please logon to your BTP Subaccount AD263-XXX ***(replace XXX with your group number)*** and navigate to Cloud Foundry -> Spaces -> AD263-XXX -> Applications -> TechEd2023Incident 
-
-![](./images/002.png)
-
-The URL mentioned in Application Routes is the target URL needed to create the destination
-
 Save your Destination
 
 ### Test Connectivity
 
 Click ![](./images/003.png)
 
-![](./images/004.png)
+![](./images/destination_test.png)
 
-The result code “404: Not Found” is the expected result and means that the connection is technical reachable, but there is no default page on the main URL. This is for the TechEd Incident Demo application ok.
+
 
 ## Create Webhook
 

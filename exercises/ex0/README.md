@@ -6,13 +6,15 @@ During this Teched exercise, you will use a Java application deployed into an SA
 
 ![](./images/overview.png)
 
-**Please replace the XXX in the excercises always with your assigned number!**
+> [!IMPORTANT]
+> Please replace the XXX in the excercises always with your assigned number!
+
 
 ### Login Information
 
-Please replace the _**XXX**_ in the user name with your place number (e.g. AD263_001@education.cloud.sap).
+Please replace the _**XXX**_ in the user name with your assigned number (e.g. AD263_001@education.cloud.sap).
 
-In the SAP BTP Cockpit, you will only see the subaccount that is relevant for you, based on your place number.
+In the SAP BTP Cockpit, you will only see the subaccount that is relevant for you, based on your assigned number.
 
 | Application | User ID | Password | URL |
 |---|---|---|---|
@@ -21,17 +23,14 @@ In the SAP BTP Cockpit, you will only see the subaccount that is relevant for yo
 
 ## Connect to SAP BTP CF Subaccount
 
-lick on the BTP Global Account Link and enter username and password
-
-> [!IMPORTANT]
-> XXX is your group number. Please replace in all occurences during the excercises
+click on the BTP Global Account Link and enter username and password
 
 Please connect via browser to the provided URL and use your credentials to log in.
 ![](./images/logon.btp.png)
 
 After successful logon you see SAP BTP Cockpit global account overview two different subaccounts:
 
-- AD263: this is the subaccount where SAP Cloud ALM and SAP BTP Alert Notification service is deployed
+- AD263: this is the subaccount where SAP Cloud ALM is deployed
 - AD263-XXX ***(replace XXX with your group number)***: this is the subaccount with the managed PaaS application used during the hands-on exercise
 
 ![](./images/002.png)
@@ -108,8 +107,10 @@ javaagent:BOOT-INF/lib/opentelemetry-javaagent-1.29.0.jar
 -Dotel.javaagent.extensions=BOOT-INF/lib/otel-agent-ext-java-1.5.4.jar: includes the SAP Otel Extension library
 -Dotel.resource.attributes=account=AD263-XXX,calmTenantId=<guid>: describes space name and space id of your BTP CF account
 -Dotel.service.name=teched-incident-demo: describes the name of the application to be shown in Cloud ALM
-
 ```
+Please verify that the property -Dotel.resource.attributes contains the right values:
+- account: AD263-XXX ***(replace XXX with your group number)***
+- calmTenantId: The Subaccount ID of your group BTP subaccount. You can find it on the overview page of the subaccount
 
 ## Trigger Exception from Demo Application
 
@@ -128,7 +129,7 @@ By clicking on the application route the demo application in your space will ope
 Please click the button `Create Exception` to raise some example exceptions from this Application.
 ![](./images/demo_app_trigger_exception.png)
 
-After triggering the exception a toast confirming the result is shown.
+After triggering the exception a toast confirming the result is shown.<br>
 ![](./images/demo_app_success_exception.png)
 
 > [!NOTE]

@@ -39,19 +39,10 @@ Select Subaccount: AD263-XXX ***(replace XXX with your group number)***
 
 ## Access to  Alert Notification service 
 
-Alert Notification service is already installed into your SAP BTP sub-account. To access it, please follow these steps: 
-1. Once logged into you BTP sub-account, :
-2. 
-   	- trigger events which are going to be ingested into the Alert Notification service API;
-   	- based on configurations made within the Alert Notification service (covered in the upcomming excercices), send an alert via email 
-3. Incident Management:
-
-
 1. Once logged into SAP BTP, go to the BTP cockpit, navigate to the subaccount, `Cloud Foundry` -> `Spaces` tab and enter your space.
 2. Click on `Instances` and you will see an instance named `ans` with a plan `free` - that is your Alert Notification service.
-![](./images/ANS service.png)   
+![](./images/ans_service.png)   
 3. Click on the `ans` link and you will be redirected to the Alert Notification service configuration UI. 
-
 
 ## Demo Application for Alert Notification service 
 

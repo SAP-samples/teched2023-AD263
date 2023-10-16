@@ -13,6 +13,7 @@ Get an overview regarding the coverage of the SAP Cloud ALM tool for use with th
 Reliability plays a central role, especially in hybrid landscapes that contain software-as-a-service (SaaS) cloud services, managed cloud components, and on-premise components. The different components involved must be monitored to maintain reliable operations at the application level. In case of an alert, a swift and ideally automatic reaction is required. SAP Cloud ALM provides monitoring applications for various components running in the cloud as well as on-premise.
 
 This session introduces attendees to the usage of SAP Cloud ALM as central observability solution for your whole SAP Solution Landscape. Escpecially in this session we will focus on the capabilities for customer developed applications in SAP BTP Cloud Foundry. You will learn how connect a PaaS application to SAP Cloud ALM, how to navigate Health Monitoring and Integration a& Exception Monitoring and how to set up alerts and notifications. To react to alerts, you will learn how to forward the event situations from SAP Cloud ALM to external 3rd party incident management tools.
+![Demo scenario](./exercises/img/demo-scenario.png)
 
 ## Requirements
 

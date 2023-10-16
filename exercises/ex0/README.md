@@ -37,7 +37,31 @@ After successful logon you see SAP BTP Cockpit global account overview two diffe
 
 Select Subaccount: AD263-XXX ***(replace XXX with your group number)***
 
-## Demo Application for this excercise
+## Access to  Alert Notification service 
+
+1. Once logged into SAP BTP, go to the BTP cockpit, navigate to the subaccount, `Cloud Foundry` -> `Spaces` tab and enter your space.
+2. Click on `Instances` and you will see an instance named `ans` with a plan `free` - that is your Alert Notification service.
+![](./images/ans_service.png)   
+3. Click on the `ans` link and you will be redirected to the Alert Notification service configuration UI. 
+
+## Demo Application for Alert Notification service 
+
+To demonstrate few possible use cases releated to the Alert Notification service, there is a demo application laready deployed to your group subaccount AD263-XXX ***(replace XXX with your group number)***. The demo application in question is going to be covered in these two sceanrios:
+
+1. Alert Notifications:
+   	- trigger events which are going to be ingested into the Alert Notification service API;
+   	- based on configurations made within the Alert Notification service (covered in the upcomming excercices), send an alert via email 
+2. Incident Management:
+	- trigger events into the Alert Notification service API;
+ 	- based on configurations made within the Alert Notification service (covered in the upcomming excercices), create an incident directly into the Incident Management App by calling the respective API
+	- **Note:** In customer environments incident management can be handled by a broad variety of Incident Management Tools provided by different vendors. In this hands-on session we will use a mock application (already deployed in your sub-accoint) to simulate an Incident Management tool with limited functionality. Please note that SAP does not offer or recommend any specific solution.
+3. (optional) Demonstrate instrumentation of this applications for Alert Notification service by enabling the needed java library so that application can send custom events to the Alert Notification API end-point. 
+
+To access the demo application please open the space AD263-XXX ***(replace XXX with your group number)***.
+![](./images/sampleApp-ANS.png)
+
+
+## Demo Application for Cloud ALM 
 
 To demonstrate the different functionalities a demo application was deployed to your group subaccount AD263-XXX ***(replace XXX with your group number)***. This demo application will service two different purposes:
 

@@ -196,8 +196,10 @@ Navigate to your subaccount AD263-XXX ***(replace XXX with your group number)***
 ![](./images/017.png)
 
 ## Summary
-- You have now access to the Demo Application for this Hands-on session.
-- You are able to trigger exceptions on demand to simulate erroneous behavior of a customer developed BTP CF Java application
-- You are able to view incidents in the Demo app created by SAP Cloud ALM or SAP BTP Alert Notification Service which will be raised during the next excercises
+- You are able to view application which can create exceptions and display incidents created by SAP Cloud ALM or SAP BTP Alert Notification Service
+- You are able to access the Alert Notification Service configuration UI
+- You understand how customer BTP applications must be instrumented to be monitored by SAP Cloud ALM
+- You understand how exceptions can be created in customer applications on BTP platform
+- You are able to review exceptions in Cloud Logging Service
 
 Continue to - [Exercise 1](../ex1/README.md)

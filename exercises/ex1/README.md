@@ -31,10 +31,7 @@ Click on `Cloud Fioundry` -> `Spaces` and then select the space that is already 
 5. You will be redirected to the Application Overview screen. Click on the `Application Routes` URL. 
 ![](./images/ans-010.png)
 
-6. You will land to the ANS Sample App home screen
-![](./images/ans-011.png)
-
-7. You will see there are 3 buttons as per the screenshot below. Clicking on each of the buttons will push a unique custom event to the Alert Notification service Producer API. 
+6. You will land to the ANS Sample App home screen where you will also see 3 buttons as per the screenshot below. Clicking on each of the buttons will push a unique custom event to the Alert Notification service Producer API. 
 ![](./images/ans-012.png)
 
 Please see below exact attributes for each of the 3 events pushed from the ANS Sample App to the Alert Notification service Producer API. 

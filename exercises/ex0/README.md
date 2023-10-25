@@ -96,7 +96,7 @@ See also the Hands-On XP261 Observability for Your SAP BTP Applications with SAP
 
 ### Check Connectivity from SAP BTP CF to SAP Cloud ALM (optional)
 
-Navigate to Connectivity -> Destinations
+Navigate back to the space AD263-XXX ***(replace XXX with your group number)***. Then to Connectivity -> Destinations
 
 ![](./images/003.png)
 

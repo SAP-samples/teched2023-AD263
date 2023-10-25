@@ -12,38 +12,6 @@ After the logon the Launchpad of SAP Cloud ALM is displayed
 
 ![](./images/002.png)
 
-## Check Landscape Management Service
-
-Navigate to Landscape Management from SAP Cloud ALM Launchpad
-
-![](./images/003.png)
-
-Open and define a scope in the Scope Selector for Landscape Management Service
-
-![](./images/004.png)
-
-![](./images/005.png)
-
-1. Click: Toggle Filter Bar to show search criteria
-1. Select Managed Object Type: Service, System
-1. Click: Go to load the list of service types
-1. Click: Select all in the result list to show all available service types
-1. Click Apply to close the scope selection and show the services and systems
-
-In the dashboard loaded you see an overview of all systems and services available in the SAP Cloud ALM tenant. The dashboard entry groups those by Managed Object Type. In each tile you see how many objects of this type are already configured and collecting data, how many are paused for monitoring and how many are new and have not yet been configured. Clicking on any type you can navigate to the list of individual Managed Objects of this type.
-
-Continue the exercise by selecting the tile SAP BTP Cloud Foundry environment
-
-![](./images/006.png)
-
-Select the SAP BTP CF AD263-XXX ***(replace XXX with your group number)*** service where your Demo Application is deployed
-
-![](./images/007.png)
-
-Please review the details of the service. Please verify the Subdomain and Subaccount ID shown here and in in the BTP Cockpit are identical.
-
-![](./images/008.png)
-
 ## Check Health Monitoring for SAP BTP CF Demo Application
 
 Navigate to Health Monitoring from SAP Cloud ALM Launchpad

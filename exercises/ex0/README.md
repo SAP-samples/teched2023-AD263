@@ -12,14 +12,14 @@ During this Teched exercise, you will use a Java application deployed into an SA
 
 ### Login Information
 
-Please replace the _**XXX**_ in the user name with your assigned number (e.g. AD263-001@education.cloud.sap).
+Please replace the _**XXX**_ in the user name with your assigned number (e.g. ad263-001@education.cloud.sap).
 
 In the SAP BTP Cockpit, you will only see the subaccount that is relevant for you, based on your assigned number.
 
 | Application | User ID | Password | URL |
 |---|---|---|---|
-| SAP Cloud ALM URL | AD263-**XXX**@education.cloud.sap | Acce$$teched23 | [SAP Cloud ALM](https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad) |
-| SAP BTP Cockpit | AD263-**XXX**@education.cloud.sap | Acce$$teched23 | [BTP Global Account](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd) |
+| SAP Cloud ALM URL | ad263-**XXX**@education.cloud.sap | Acce$$teched23 | [SAP Cloud ALM](https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad) |
+| SAP BTP Cockpit | ad263-**XXX**@education.cloud.sap | Acce$$teched23 | [BTP Global Account](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd) |
 
 ## Connect to SAP BTP CF Subaccount
 

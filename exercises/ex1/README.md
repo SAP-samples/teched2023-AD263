@@ -9,7 +9,7 @@
 ![](./images/ans-007-producer-api.png)
 
 The diagram above is explained underneath: 
-- there is a clloud app already deployed and running on BTP CF in your subaccount
+- there is a cloud app already deployed and running on BTP CF in your subaccount
 - this app is already instrumented with the Alert Notification service java library so that it is possible to be defined different custom events which can be triggered by the app automatically or manually. In our use cases the events can be triggered manually.
 - once the events are triggered by the app, these will be ingested into the Alert Notification service Producer API so that further filtering and actions from the service can be performed. **NOTE**: creating filtering (conditions) and applying specific actions associated to the conditions are described in details
 
@@ -37,7 +37,7 @@ Click on `Cloud Fioundry` -> `Spaces` and then select the space that is already 
 Please see below exact attributes for each of the 3 events pushed from the ANS Sample App to the Alert Notification service Producer API. 
 
 **Push Info Notification**
-It pushees a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.INFO)`
+It pushes a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.INFO)`
 Event code is shared as well here: 
 ```
 public static CustomerResourceEvent buildWarningEvent() {
@@ -56,7 +56,7 @@ public static CustomerResourceEvent buildWarningEvent() {
 ```
 
 **Push Warning Notification**
-It pushees a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.WARNING)`
+It pushes a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.WARNING)`
 
 Event code is shared as well here: 
 ```
@@ -77,7 +77,7 @@ public static CustomerResourceEvent buildWarningEvent() {
 
 
 **Push Error Notification**
-It pushees a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.ERROR)`
+It pushes a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.ERROR)`
 
 Event code is shared as well here: 
 ```
@@ -99,7 +99,7 @@ public static CustomerResourceEvent buildErrorEvent() {
 > [!NOTE]
 > As you see: main difference between these 3 events is the severity. That will be useful to determine specific actions based on events' severity once these get pushed into the Alert Notification service. 
 
-8. Now, let's play with the app and see what the result it will be. Click on any of the available buttons (e.g. `Push Info Notification`, etc.) and you shoild see this this confirmation message. 
+8. Now, let's play with the app and see what the result it will be. Click on any of the available buttons (e.g. `Push Info Notification`, etc.) and you should see this this confirmation message. 
 ![](./images/ans-013.png)
 
 The result is that the custom event was pushed successfully to ANS API. In order to get alerts and / or automated actions triggered by the Alert Notification service based on the event ingested we need to configure the Alert Notification service itself. That is explained in details in the next section. 

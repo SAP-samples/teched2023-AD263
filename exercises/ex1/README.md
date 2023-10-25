@@ -300,32 +300,21 @@ As a next step you need to create an action - as per the specific use case - it 
 ![](./images/ans-021.png)
 
 2.2. There is "Create Action" wizzard displayed , please follow these steps:
-2.2.1. Select `Email` and click `Next`
-![](./images/ans-022.png)
+2.2.1. Select `Webhook`  and click `Next`
+![](./images/ans-038.png)
 
 2.2.2. Fill in the  details to create the needed action: 
-* Name: `sendEmailToMe`
-* Description: `send email to my email address`
-* Labels: `email`
-* Email Address: `{your-email-address`} - provide an email address which you have an access to.
+* Name: `creteTicket`
+* Description: `create a ticket in a Ticketing system`
+* Labels: `ticketingSystem`
+* URL address: `{teched-incident-demo-ui-url}{createTicket_api_endpoint}` that has been already deployed in your BTP CF Space - where you can replace `{createTicket_api_endpoint}` with `/api/v1/tech-ed/createTicket`
 * Click on `Create` button
-![](./images/ans-023.png)
+![](./images/ans-039.png)
 
 2.2.3. You will see an confirmation screen that the action has been created. 
-*NOTE* You should also check your email inbox and confirm your email address. 
-![](./images/ans-024.png)
 
-2.2.4. Confirm your email address: access your inbox and find the email sent by the Alert Notification service  - look for an email with a subject `[ACTION REQUIRED] SAP Alert Notification service for SAP BTP. Confirmation Token` and click on follow link as per the screenshot below . 
-![](./images/ans-025.png)
-
-2.2.5. Click on the confirmation buttion in your browser to confirm your email. 
-![](./images/ans-026.png)
-
-2.2.6. You will see this confirmation message in your browser.
-![](./images/ans-027.png)
-
-Now the action `sendEmailToMe` is created, email has been activited and you should see this screen within the "Actions" section. 
-![](./images/ans-028.png)
+Now the action `creteTicket` is created and you should see this action within the "Actions" section. 
+![](./images/ans-040.png)
 
 
 3. **Create Subscription**
@@ -336,291 +325,36 @@ As a next step you need to create the subscription.
 
 3.2. There is "Create Subscription" wizzard displayed , please follow these steps:
 3.2.1. Create Subsription: fill in the form with the needed details 
-* Name: `sampleApp_InfoEvent`
-* Description: `a subscription to be fired for a custom event with severity INFO`
+* Name: `sampleApp_WarningEvent`
+* Description: `a subscription to be fired for a custom event with severity WARNING`
 * Labels: `sampleApp`
 * Satte: `On` (this is the default state)
-![](./images/ans-030.png)
 * Click on the `Create` button
+![](./images/ans-041.png)
 
 3.2.2. Select Conditions: select the conditions you have created and click on the `Assign` button
-![](./images/ans-031.png)
+![](./images/ans-042.png)
 
 3.2.3. Select Actions: select the action you have created and click on the `Assign` button
-![](./images/ans-032.png)
+![](./images/ans-043.png)
 
 3.2.4. Confirmation screen: you will see a confirmation screen. Click on `Close` button. 
-![](./images/ans-033.png)
+![](./images/ans-044.png)
 
 Now you will see the active subscription you just have configured.
-![](./images/ans-034.png)
+![](./images/ans-045.png)
 
 
-#### Use Case #1: Simulation and Outputs 
+#### Use Case #2: Simulation and Outputs 
 
 Now it is time to simulate the use case and inspect the outputs. To do so , please follow these steps: 
 
 1. Access the ANS Sample App (as already described).
-2. Click on the `Push Info Notification`
+2. Click on the `Push Warning Notification`
 3. The custom event will be pushed into the Alert Notification sevice Producer API, then Alert Notification service will filter out the event based on the conditions set for the active subcription and it will also trigger the action associated to this very subscription.
-4. Check your inbox - you should get the expected email notifcation sent by the Alert Notification service (see an example as per the screenshot below). 
-![](./images/ans-035.png)
-
-
-
-## Introduction to Alert Notification service!  
-[![Alert Notification Internal Pages](https://img.shields.io/badge/Instant%20Problem%20Notifications-Alert%20Notification-fabc02.svg)](https://github.wdf.sap.corp/pages/sl-hybrid/ans/)
-[![Automation Pilot Internal Pages](https://img.shields.io/badge/Automatic%20Reactions-Automation%20Pilot-03cdff.svg)](https://github.wdf.sap.corp/pages/sl-actions/landing-page/) 
-
----
-
-### **Overview**
-Have you ever faced  the challenge to keep the information about your cloud resources in a single place? Have you ever thought _"Do I actually need to
-keep watching so many dashboards"_?  
-
-In the next 15 minutes, you will learn how to stay always notified about what is happening with your SAP BTP environment. In this example,
-we will set up notifications for availability and lifecycle changes of Cloud Foundry application. Additionally, we will build a custom notification that 
-will inform you for an occurred situation within the application itself.
-
-Let's do it...     
-
----
-
-### **1. Access Alert Notification service**
-1. Visit your SAP BTP Account and access the service "Alert Notification service for SAP BTP"
-  
-
-### **2. Set up Alert Notification configuration**
-1. Navigate to **Export or Import** page of your Alert Notification instance.
-2. In the **Import** input, paste the JSON provided below & replace the placeholders as follows: 
-    * _**{your_personal_email}**_ - replace it with your personal email, of course you can use your SAP email if you have easy access to it.
-    * _**{your_event_type}**_ - replace it with the one you have provided in **AnsUtils.convertToAnsEvent** from section 3) step 5)
-
-_Note: It is a predefined configuration that describes what happens when a particular event for you is received in Alert Notification._
-```json
-{
-   "conditions": [
-     {
-       "name": "cloud_app-custom-event",
-       "propertyKey": "eventType",
-       "predicate": "EQUALS",
-       "propertyValue": "{your_event_type}",
-       "labels": [],
-       "description": "Will match custom produced events, generated in your app web UI"
-     },
-     {
-       "name": "is-app-crash",
-       "propertyKey": "eventType",
-       "predicate": "EQUALS",
-       "propertyValue": "app.crash",
-       "labels": [],
-       "description": "Will match app.crash events, received from CF Cloud Controller"
-     },
-     {
-       "name": "is-audit-app-process-crash",
-       "propertyKey": "eventType",
-       "predicate": "EQUALS",
-       "propertyValue": "audit.app.process.crash",
-       "labels": [],
-       "description": "Will match audit.app.process.crash events, received from CF Cloud Controller"
-     },
-     {
-       "name": "is-audit-app-update",
-       "propertyKey": "eventType",
-       "predicate": "EQUALS",
-       "propertyValue": "audit.app.update",
-       "labels": [],
-       "description": "Will match audit.app.update events, received from CF Cloud Controller"
-     },
-     {
-       "name": "is-audit-app-create",
-       "propertyKey": "eventType",
-       "predicate": "EQUALS",
-       "propertyValue": "audit.app.create",
-       "labels": [],
-       "description": "Will match audit.app.create events, received from CF Cloud Controller"
-     },
-     {
-       "name": "is-audit-app-droplet-create",
-       "propertyKey": "eventType",
-       "predicate": "EQUALS",
-       "propertyValue": "audit.app.droplet.create",
-       "labels": [],
-       "description": "Will match audit.app.droplet.create events, received from CF Cloud Controller"
-     },
-     {
-       "name": "is-audit-app-delete-request",
-       "propertyKey": "eventType",
-       "predicate": "EQUALS",
-       "propertyValue": "audit.app.delete-request",
-       "labels": [],
-       "description": "Will match audit.app.delete.request events, received from CF Cloud Controller"
-     }
-   ],
-   "actions": [
-     {
-       "name": "email-action",
-       "state": "ENABLED",
-       "labels": [],
-       "description": "",
-       "destination": "{your_personal_email}",
-       "type": "EMAIL"
-     },
-     {
-       "name": "store-action",
-       "state": "ENABLED",
-       "labels": [],
-       "description": "",
-       "type": "STORE"
-     }
-   ],
-   "subscriptions": [
-     {
-       "name": "store-app-crash-events",
-       "conditions": [
-         "is-audit-app-process-crash",
-         "is-app-crash"
-       ],
-       "actions": [
-         "store-action"
-       ],
-       "labels": [],
-       "state": "ENABLED",
-       "description": "Any event that matches at least one of the conditions \"is-audit-app-process-crash\" or \"is-app-crash\" will be stored in your event storage (see your app web UI)."
-     },
-     {
-       "name": "mail-me-app-lifecycle-events",
-       "conditions": [
-         "is-audit-app-update",
-         "is-audit-app-create",
-         "is-audit-app-droplet-create",
-         "is-audit-app-delete-request"
-       ],
-       "actions": [
-         "email-action"
-       ],
-       "labels": [],
-       "state": "ENABLED",
-       "description": "Any event that matches at least one of the included conditions will be sent to the provided e-mail address."
-     },
-     {
-       "name": "mail-me-custom-event",
-       "conditions": [
-         "cloud_app-custom-event"
-       ],
-       "actions": [
-         "email-action"
-       ],
-       "labels": [],
-       "state": "ENABLED",
-       "description": "Any event that matches the \"cloud_app-custom-event\" condition will be sent to the provided e-mail address."
-     }
-   ]
-}
-```
-_**Note: Shortly after importing the configuration you will receive an email about confirming the Email action. From the email navigate to the given URL and click on Confirm.**_
-
-
-### **3. Push your custom events to Alert Notification service **
-It's high time to take a look what is the actual benefit from what we have done so far:
-
-#### Application lifecycle events
-Within the configuration we imported in section 4) step 2), we declared we want to receive all associated notifications via e-mail every time
-an application within the current space is started or stopped.   
-
-Once the application is deployed & started, verify you have just received a notification that informs you for this event ✈️
-
-#### Custom event
-In section 3) above, we have just configured the application to react on some custom situation with producing a custom event that is sent to Alert Notification.  
-
-Let's now induce that situation following the steps: 
-1. Within the Cloud Cockpit, navigate to your application **Overview** page, click on the available application route
-2. Click on **Produce Custom Event** tile
-    * (_**Optional**_) 2.a. If you have configured to use the received object in the source code, fulfill the properties with some demo values
-3. Click on **Send**
-
-Verify you have just received an e-mail that contains the exact values you have fulfilled in the form from step 2.a.) above or have configured in the source code ✈️
-
-#### Application availability test
-In the demo application, we have defined a custom endpoint to be used by the Cloud Controller for health check. Let's now simulate that our application is not 
-_"healthy"_ using the **Availability Check** tile within the application's UI. Turn the availability status off, so that our custom health endpoint will return a bad status code.
-In no time the Cloud Controller will find out that our application is unhealthy and very soon you'll have an event in your storage that informs for this situation. Preview
-the associated with application crash event by clicking on the **Stored events** tile in the main page of your application's UI.
-
-### Congrats - you've just completed this excercise!
-
-**[OPTIONAL] **
-
-### ** [Optional] 4. Instantiate Alert Notification and Initial Setup**
-1. Navigate to the subaccount named **trial**
-2. Navigate to **Members** tab (located on the left) and add the following user _sap_cp_eu10_ans@sap.com_ with role **Organization Auditor**. It's needed to pull lifecycle events for this subaccount.
-3. Now, navigate to the already created space with name **dev**
-4. In the **Service Marketplace**, search for __**Alert Notification**__ and click on the tile
-5. In the **Instances** page, click on **New Instance**, choose plan **Standard**, proceed without parameters and application assigned, enter some **Instance Name**
-6. Navigate to the newly created instance of Alert Notification
-7. From the **Service Keys** page, click on **Create Service Key**, enter some name and provide the following **Configuration Parameters**:
-```json
-{
-  "type": "BASIC"
-}
-```
-_Note: Leave the browser open, as you will need it in the next steps_
-
-### ** [Optional] 5. Configure your application**
-1. Navigate to _Documents_ and clone a clean instance of the current repository using Git Bash and the following command:
-    ```bash
-    mkdir $(date | md5sum | cut -d ' ' -f1) && cd "$_" && git config --global http.sslVerify false && git clone [repository_clone_url]
-    ```
-    _Note: Leave the terminal open, as you might need it in the next steps_
-2. Open the **cloud-app** in your preferred Java editor – IntelliJ Idea or Eclipse  
-_**NOTE: Make sure that you open your clone of the repository**_
-3. Navigate to **application.properties** and populate:
-    ```properties
-       cloud_app.alert.notification.client.id={client_id}
-       cloud_app.alert.notification.client.secret={client_secret}
-    ```
-    **Hint:** Replace _{client_id}_ and _{client_secret}_ with the corresponding values from the service key you have created in section 2) step 7) above
-4. Navigate to **manifest.yaml** and replace _{ans-instance-name}_ with the name of your Alert Notification instance you have created in section 1) step 5) above
-5. Navigate to **AnsUtils.java** and populate the methods:
-```java
-   public static IAlertNotificationClient buildAnsClient(String clientId, String clientSeret);
-   public static CustomerResourceEvent convertToAnsEvent(CustomerEventDto eventDto);
-   private static AffectedCustomerResource buildCustomerResource();
-```
-**Hint:** Use the the appropriate builders provided from [Alert Notification Client library](https://github.com/SAP/clm-sl-alert-notification-client). Some default values are left in order to give you some hints on how to build some of the objects. 
-Furthermore, some instructions are provided in the source code itself.
-
-### **[ Optional] 6. Build and deploy your application**
-1. In terminal, navigate to the home directory of your application
-2. Build it with the command:
-    ```bash
-    mvn clean install
-    ```
-3. Push the application to Cloud Foundry. Here you have two options – either via the Cockpit UI, or using the command line:
-
-* a. Push from  BTP Cockpit
-1. In space **dev**, navigate to the **Applications** page   
-2. Click on **Deploy Application**
-   * 2.a. **File location**: browse for _{demo-app-home-dir}_/target/ans-demo-application-1.0.0.jar  
-   * 2.b. Make sure the checkbox for using of Manifest.yaml is checked
-   * 2.c. **Manifest location**: browse for _{demo-app-home-dir}_/manifest.yaml  
-
-_**NOTE: Make sure that you use jar and manifest from your clone of the repository**_  
-_**Hint: A simple `pwd` command in the opened terminal will give you the absolute path to the current directory**_
-
-b. Push from command line  
-1. Navigate to the application's home directory  
-2. Login to Cloud Foundry  
-    * 2.a. Navigate to your newly created/existing trial subaccount. Copy the _API Endpoint_ URL address, located under the _CloudFoundry_ information. The default url should be: _https://api.cf.eu10.hana.ondemand.com_
-    * 2.b. Connect to Cloud Foundry using _cf_ command:
-    ```bash
-     cf login -a {copied-api-endpoint-url} -u {your-email-address-provided-upon-account-registration}
-    ```
-    _Note: When prompt, enter your password. Also if prompt, navigate to your **trial** account, space **dev**_
-3. Push the application  
-    ```bash
-    cf push
-    ```
+4. Access the UI of the ticketing system that has been already deployed in your BTP CF Space  - `{teched-incident-demo-ui-url}
+5. You should see an incident created automatically by the Alert Notification service (see an example as per the screenshot below). 
+![](./images/ans-046.png)
 
 ---
  
@@ -633,10 +367,9 @@ An easy integration to Alert Notification in a few steps is [available](https://
 
 
 
-
 ## Summary
 
-You've now ...
+You've now managed to see Alert Notification service in action. With its flexible events' filtering combined with a rich catalog of actions that can be triggered automatically, the Alert Notification service is a solid product, valuable for each (Dev)Ops team that can be used in a wide variaty in use cases.
 
 Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
 

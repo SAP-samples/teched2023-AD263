@@ -158,7 +158,7 @@ In this use case there will be a custom event (`Info Notification` - already exp
 
 1.2. Create a Condition with "Event Type" set to `TechEdDemoEvent`
 > [!NOTE]
-> Since there might be events from different sources with severity set to `INFO` it is a good practice to filter out the events also on other parameters. In this use case, we will use also the "Event type" which for all events pushed by the ANS Sample app is set to `TechEdDemoEvent`. Therefore on a later stage will use a combination of two conditions `severity` + `eventType` to make a unique filtering for the events. 
+> Since there might be events from different sources with severity set to `INFO` it is a good practice to filter out the events also on other parameters. In this use case, we will use also the "Event type" which for all events pushed by the ANS Sample app is set to `TechEdDemoEvent`. Therefore on a later stage it migth be used a combination of two conditions `severity` **AND** `eventType` to make a unique filtering for the events. However, considering that the landscape for this demo is not that complex and there won't be that many events pushed to the Alert Notification service, for setting up the subscriptions will be used this combination of subscriptions:   `severity` **OR** `eventType`
 
 1.2.1.From the left-sidebar menu: select `Conditions` menu item, followed by the button `Create`
 ![](./images/ans-015.png)

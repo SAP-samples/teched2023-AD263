@@ -225,7 +225,7 @@ As a next step you need to create the subscription.
 * Name: `sampleApp_InfoEvent`
 * Description: `a subscription to be fired for a custom event with severity INFO`
 * Labels: `sampleApp`
-* Satte: `On` (this is the default state)
+* State: `On` (this is the default state)
 ![](./images/ans-030.png)
 * Click on the `Create` button
 
@@ -329,7 +329,7 @@ As a next step you need to create the subscription.
 * Name: `sampleApp_WarningEvent`
 * Description: `a subscription to be fired for a custom event with severity WARNING`
 * Labels: `sampleApp`
-* Satte: `On` (this is the default state)
+* State: `On` (this is the default state)
 * Click on the `Create` button
 ![](./images/ans-041.png)
 

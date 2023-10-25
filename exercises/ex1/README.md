@@ -302,6 +302,13 @@ As a next step you need to create an action - as per the specific use case - it 
 * Description: `create a ticket in a Ticketing system`
 * Labels: `ticketingSystem`
 * URL address: `{teched-incident-demo-ui-url}{createTicket_api_endpoint}` that has been already deployed in your BTP CF Space - where you can replace `{createTicket_api_endpoint}` with `/api/v1/tech-ed/createTicket`
+* Payload Tempalte:
+```
+{
+    "subject": "Ticket from ANS Sample App",
+    "priority": 2
+}
+```
 * Click on `Create` button
 ![](./images/ans-039.png)
 

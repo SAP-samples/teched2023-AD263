@@ -1,7 +1,4 @@
-<img src="https://user-images.githubusercontent.com/11653294/64466233-7cd17480-d119-11e9-8965-e036c1e23c9a.png" alt="CF logo" height="100" align="left"/>
-
 # Exercise 1 - Setting up events and alerts via SAP Alert Notification service 
-
 
 ## Exploring the ANS Sample App 
 

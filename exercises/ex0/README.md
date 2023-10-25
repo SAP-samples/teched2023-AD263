@@ -82,7 +82,7 @@ By clicking on the application route the demo application in your space will ope
 
 The demo app will open
 ![](./images/demo_app_overview.png)
-1. In this area incidents are displayed and navigation to incident details is possible
+1. In this area incidents are displayed and navigation to incident details is possible (in the beginning of the excercise the table will be empty)
 2. With the button Create Exception you can manually trigger exception generation from this application
 
 Keep the demo app open in a separate tab of your browser. During this excercise we will come back here multiple times.
@@ -198,6 +198,6 @@ Navigate to your subaccount AD263-XXX ***(replace XXX with your group number)***
 ## Summary
 - You have now access to the Demo Application for this Hands-on session.
 - You are able to trigger exceptions on demand to simulate erroneous behavior of a customer developed BTP CF Java application
-- You are able to view incidents created by SAP Cloud ALM or SAP BTP Alert Notification Service
+- You are able to view incidents in the Demo app created by SAP Cloud ALM or SAP BTP Alert Notification Service which will be raised during the next excercises
 
 Continue to - [Exercise 1](../ex1/README.md)

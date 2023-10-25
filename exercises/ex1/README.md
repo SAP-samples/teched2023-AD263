@@ -359,7 +359,7 @@ Now it is time to simulate the use case and inspect the outputs. To do so , plea
 
 ---
 
-### Use Case 3: Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)
+###[OPTIONAL] Use Case 3: Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)
 
 #### Use Case #3: Solution Diagram
 ![](./images/ans-014.png)
@@ -368,76 +368,6 @@ Now it is time to simulate the use case and inspect the outputs. To do so , plea
 In this use case there will be a custom event (`Error Notification` - already explained in previous sections) pushed by the ANS Sample App to the Alert Notification service. Based on an active `Subcription` (which cosists of `Conditions` and `Actions`) in Alert Notification service, the event will be filtered out and an action (ops remeditation command via SAP Automation Pilot) will be automatically triggered by the Alert Notification service. Please follow the section below. 
 
 #### Use Case #2: Alert Notification service - Configuration
-
-**Access the Alert Notification service** overview page (see _Access SAP Alert Notification service _)
-
-1. **Create Conditions**
-
-1.1. Create a Condition with "Severity" set to `WARNING`
-
-1.1.1.From the left-sidebar menu: select `Conditions` menu item, followed by the button `Create`
-![](./images/ans-015.png)
-
-1.1.2. Fill in the  details to create the needed dondition. In this use case it we need to create a condition so that we can filter out the events based on a particular `severity`. 
-* Name:  `severityWarning`
-* Description: `EventSeverity set to WARNING`
-* Label: `severity`
-* Condition: use the drop downs so that you can setup the condition correctly = `severity` ->  `Is Equal To` -> `WARNING`
-* Click on `Create` button to save the configuration
-![](./images/ans-037.png)
-* You will see a confirmation screen. Then click on the `Close` button. 
-
-> [!NOTE]
-> In the previous step you already have created the contion  `eventType_TechEdApp`. We will reuse it on a later stage (when a subscription is to be created) so for now there's no need to create more conditions.
-
-
-2. **Create Actions**
-As a next step you need to create an action - as per the specific use case - it is needed to create an action for creating a ticket in a Ticketing system. To do so follow the steps defined below. 
-
-2.1. From the left-sidebar menu: select `Actions` menu item, followed by the button `Create`
-![](./images/ans-021.png)
-
-2.2. There is "Create Action" wizzard displayed , please follow these steps:
-
-### Use Case 3: Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)
-
-#### Use Case #3: Solution Diagram
-![](./images/ans-014.png)
-
-#### Use Case #2: Explained
-In this use case there will be a custom event (`Error Notification` - already explained in previous sections) pushed by the ANS Sample App to the Alert Notification service. Based on an active `Subcription` (which cosists of `Conditions` and `Actions`) in Alert Notification service, the event will be filtered out and an action (ops remeditation command via SAP Automation Pilot) will be automatically triggered by the Alert Notification service. Please follow the section below. 
-
-#### Use Case #2: Alert Notification service - Configuration
-
-**Access the Alert Notification service** overview page (see _Access SAP Alert Notification service _)
-
-1. **Create Conditions**
-
-1.1. Create a Condition with "Severity" set to `WARNING`
-
-1.1.1.From the left-sidebar menu: select `Conditions` menu item, followed by the button `Create`
-![](./images/ans-015.png)
-
-1.1.2. Fill in the  details to create the needed dondition. In this use case it we need to create a condition so that we can filter out the events based on a particular `severity`. 
-* Name:  `severityWarning`
-* Description: `EventSeverity set to WARNING`
-* Label: `severity`
-* Condition: use the drop downs so that you can setup the condition correctly = `severity` ->  `Is Equal To` -> `WARNING`
-* Click on `Create` button to save the configuration
-![](./images/ans-037.png)
-* You will see a confirmation screen. Then click on the `Close` button. 
-
-> [!NOTE]
-> In the previous step you already have created the contion  `eventType_TechEdApp`. We will reuse it on a later stage (when a subscription is to be created) so for now there's no need to create more conditions.
-
-
-2. **Create Actions**
-As a next step you need to create an action - as per the specific use case - it is needed to create an action for creating a ticket in a Ticketing system. To do so follow the steps defined below. 
-
-2.1. From the left-sidebar menu: select `Actions` menu item, followed by the button `Create`
-![](./images/ans-021.png)
-
-2.2. There is "Create Action" wizzard displayed , please follow these steps:
 
 --- 
 ### **Want to automate the reactions to your routine problems?**

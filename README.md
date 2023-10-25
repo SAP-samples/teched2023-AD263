@@ -4,7 +4,7 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2022 session called AD263 - Configure Alerting for SAP BTP Using SAP Cloud ALM.
+This repository contains the material for the SAP TechEd 2023 session called AD263 - Configure Alerting for SAP BTP Using SAP Cloud ALM.
 
 Get an overview regarding the coverage of the SAP Cloud ALM tool for use with the different components of SAP Business Technology Platform (SAP BTP). Configure some of the use cases, from configuration of data collection down to the integration of third-party consumers such as ticket systems. Learn how you can replace existing scenarios of SAP Alert Notification service for SAP BTP with SAP Cloud ALM. See how to enhance, customize, and troubleshoot integration to third-party event consumers.
 

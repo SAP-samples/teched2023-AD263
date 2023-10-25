@@ -12,7 +12,7 @@ During this Teched exercise, you will use a Java application deployed into an SA
 
 ### Login Information
 
-Please replace the _**XXX**_ in the user name with your assigned number (e.g. AD263_001@education.cloud.sap).
+Please replace the _**XXX**_ in the user name with your assigned number (e.g. AD263-001@education.cloud.sap).
 
 In the SAP BTP Cockpit, you will only see the subaccount that is relevant for you, based on your assigned number.
 

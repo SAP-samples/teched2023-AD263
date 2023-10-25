@@ -39,7 +39,7 @@ Click on `Cloud Fioundry` -> `Spaces` and then select the space that is already 
 
 Please see below exact attributes for each of the 3 events pushed from the ANS Sample App to the Alert Notification service Producer API. 
 
-**Push Info Notification **
+**Push Info Notification**
 It pushees a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.INFO)`
 Event code is shared as well here: 
 ```
@@ -58,7 +58,7 @@ public static CustomerResourceEvent buildWarningEvent() {
                 ).build();
 ```
 
-**Push Warning Notification **
+**Push Warning Notification**
 It pushees a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.WARNING)`
 
 Event code is shared as well here: 
@@ -79,7 +79,7 @@ public static CustomerResourceEvent buildWarningEvent() {
 ```
 
 
-**Push Error Notification **
+**Push Error Notification**
 It pushees a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.ERROR)`
 
 Event code is shared as well here: 
@@ -98,7 +98,6 @@ public static CustomerResourceEvent buildErrorEvent() {
                                 .build()
                 ).build();
 ```
-
 
 > [!NOTE]
 > As you see: main difference between these 3 events is the severity. That will be useful to determine specific actions based on events' severity once these get pushed into the Alert Notification service. 

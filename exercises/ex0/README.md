@@ -81,12 +81,12 @@ The demo app will open
 
 Keep the demo app open in a separate tab of your browser. During this excercise we will come back here multiple times.
 
-## Cloud ALM instrumentation of the Demo Application (Optional)
+## Cloud ALM instrumentation of the Demo Application
 
 The complete procedure how to instrument customer developed applications is described in the SAP Cloud ALM Expert Portal
 <https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/data-collection-infrastructure.html>
 
-See also the Hands-On XP261 Observability for Your SAP BTP Applications with SAP Cloud ALM for a step-by-step explanation.
+See also the Hands-On XP261 Observability for Your SAP BTP Applications with SAP Cloud ALM for a step-by-step explanation. For the purpose of this session the instrumentation has been already provided.
 
 ## Trigger Exception from Demo Application
 

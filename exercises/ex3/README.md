@@ -1,5 +1,9 @@
 # Exercise 3 - Configure Integration with External Ticket Management System from Cloud ALM
 
+## Demo Scenario
+
+Context
+![](./images/demo-scenario-ex3.png)
 SAP Cloud ALM does not offer a build-in Incident Management functionality. To enable collaboration a 3rd party incident management tool can be integrated with Cloud ALM. The complete step-by-step documentation is available at <https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/intelligent-event-processing/integration-ticket-systems.html>. The following steps explain how to connect the demo application in your BTP CF account as incident management tool.
 
 ## Create Destination to your Incident Management Ticket System

@@ -1,5 +1,11 @@
 # Exercise 4 - End-to-End Execution
 
+## Demo Scenario
+
+Context
+![](./images/demo-scenario-ex4.png)
+As in the diagramm above shown in this exercise we will now configure enable the full end-to-end flow where the support teams will mainly work with the ticket system to retrieve ongoing incidents and react on those tickets by checking the details in SAP Cloud ALM and SAP Cloud logging service to reduce MTTD and MTTR 
+
 ## Configure automatic ticket creation at event in Integration & Exception Monitoring
 
 Navigate to Integration & Exception from Cloud ALM Launchpad

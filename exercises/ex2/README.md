@@ -1,5 +1,13 @@
 # Exercise 2 - Prepare and Configure SAP Cloud ALM
 
+## Demo Scenario
+
+Context
+![](./images/demo-scenario-ex2.png)
+As in the diagramm above shown in this exercise we will now configure SAP Cloud ALM to monitor the demo application and react on exceptions with raising alerts in SAP Cloud ALM. The support teams will work interactively inside of SAP Cloud ALM to see new upcoming alerts and check the details in Cloud ALM as well as retrieve details with the usage of SAP Cloud Logging Service.
+
+## Connect to SAP Cloud ALM
+
 Logon to the AD263 SAP Cloud ALM Tenant:
 
 <https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad>
@@ -11,6 +19,7 @@ Select the **tdct3ched1.accounts.ondemand.com** Identity Provider. Use the cre
 After the logon the Launchpad of SAP Cloud ALM is displayed
 
 ![](./images/002.png)
+
 
 ## Check Health Monitoring for SAP BTP CF Demo Application
 
@@ -148,6 +157,7 @@ Navigate to the Home of Integration & Exception Monitoring
 
 - You have now access to the Cloud ALM tenant as central observability solution for this Hands-on session.
 - Your managed customer created Java application deployed in BTP CF is available and configured for monitoring in Health Monitoring and Integration & Exception Monitoring in SAP Cloud ALM
+- You learned about the different monitoring capabilities provided by Cloud ALM and how the integration between central observability solution and local expert tools like Cloud logging service is working
 - Exceptions from the Demo Application are creating events and alerts in SAP Cloud ALM
 
 Continue to - [Exercise 3](../ex3/README.md)

@@ -32,6 +32,7 @@ The requirements to follow the exercises in this repository
 - [Exercise 3 - Configure Integration with External Ticket Management System from Cloud ALM](exercises/ex3/)
 - [Exercise 4 - End-to-End Execution](exercises/ex4/)
 
+## Background Information
 
 - [Excurse - Cloud ALM instrumentation (optional)](exercises/ex5/)
 

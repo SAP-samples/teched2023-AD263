@@ -24,6 +24,7 @@ Destination Configuration: Blank Template
 Name: CALM_INCIDENT_AD263-XXX (replace XXX with your group number)
 Type: HTTP
 Description: Incident for AD263-XXX (replace XXX with your group number)
+URL: use the Url copied earlier to notepad
 Proxy Type: Internet
 Authentication: NoAuthentication
 ```

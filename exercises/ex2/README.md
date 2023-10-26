@@ -1,4 +1,4 @@
-# Exercise 2 - Prepare and Configure SAP Cloud ALM
+# Exercise 2 - Configuration and Usage of SAP Cloud ALM
 
 ## Demo Scenario
 

@@ -28,7 +28,7 @@ The requirements to follow the exercises in this repository
 
 - [Exercise 0 - Getting Started](exercises/ex0/)
 - [Exercise 1 - Configure Alert Notification Service](exercises/ex1/)
-- [Exercise 2 - Configure SAP Cloud ALM](exercises/ex2/)
+- [Exercise 2 - Configuration and Usage of SAP Cloud ALM](exercises/ex2/)
 - [Exercise 3 - Configure Integration with External Ticket Management System from Cloud ALM](exercises/ex3/)
 - [Exercise 4 - End-to-End Execution](exercises/ex4/)
 - [Exercise 5 - Troubleshooting](exercises/ex5/)

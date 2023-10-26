@@ -31,10 +31,9 @@ The requirements to follow the exercises in this repository
 - [Exercise 2 - Configuration and Usage of SAP Cloud ALM](exercises/ex2/)
 - [Exercise 3 - Configure Integration with External Ticket Management System from Cloud ALM](exercises/ex3/)
 - [Exercise 4 - End-to-End Execution](exercises/ex4/)
-- [Exercise 5 - Troubleshooting](exercises/ex5/)
 
 
-Start the exercises [here] (https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad#Shell-home).
+- [Excurse - Cloud ALM instrumentation (optional)](exercises/ex5/)
 
 ## Presentation
 Access the ...

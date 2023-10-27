@@ -38,7 +38,7 @@ The requirements to follow the exercises in this repository
 
 ## Presentation
 Access the ...
-* Session presentation: [AD263@SAP\_TechEd\_2023.pdf (coming soon)](./exercises/img/AD263@SAP_TechEd_2023.pdf)
+* Session presentation: [AD263@SAP\_TechEd\_2023.pdf](./exercises/img/AD263@SAP_TechEd_2023.pdf)
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.

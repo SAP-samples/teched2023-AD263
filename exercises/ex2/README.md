@@ -143,7 +143,7 @@ Navigate to the Home of Integration & Exception Monitoring
 1. Review the Collection Context
 1. Review the Correlation Context
 1. Review the Process Arguments
-1. Navigate to Cloud Logging Service to see the details in local dashboard
+1. *Navigate to Cloud Logging Service to see the details in local dashboard* (**as Cloud Logging Service will be released for customers by end of November only this functionality is currently not yet available**)
 
 ## Review Alert for the Exception in SAP Cloud ALM
 

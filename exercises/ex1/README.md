@@ -56,7 +56,7 @@ public static CustomerResourceEvent buildWarningEvent() {
                 .withAffectedResource(
                         new AffectedCustomerResourceBuilder()
                                 .withType("demo-application")
-                                .withName("ans-sample-app-ad263-000")
+                                .withName("ans-sample-app-ad263-001")
                                 .build()
                 ).build();
 ```
@@ -76,7 +76,7 @@ public static CustomerResourceEvent buildWarningEvent() {
                 .withAffectedResource(
                         new AffectedCustomerResourceBuilder()
                                 .withType("demo-application")
-                                .withName("ans-sample-app-ad263-3")
+                                .withName("ans-sample-app-ad263-001")
                                 .build()
                 ).build();
 ```
@@ -97,7 +97,7 @@ public static CustomerResourceEvent buildErrorEvent() {
                 .withAffectedResource(
                         new AffectedCustomerResourceBuilder()
                                 .withType("demo-application")
-                                .withName("ans-sample-app-ad263-3")
+                                .withName("ans-sample-app-ad263-001")
                                 .build()
                 ).build();
 ```

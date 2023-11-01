@@ -1,5 +1,11 @@
 # Exercise 1 - Setting up events and alerts via SAP Alert Notification service 
 
+**IMPORTANT:**
+In this exercise it is covered a particular use case: "Alert Notification service - Create a Ticket in a Ticket System based on a custom event". However, please be informed there are also two more optional use cases related to Alert Notificaiton service:
+- [(Optional) Exercise 6 - Alert Notification service - Send a Notification Email based on a custom event](../ex6/README.md)
+- [(Optional) Exercise 7 -  Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)](../ex7/README.md)
+
+
 ## Exploring the ANS Sample App 
 
 > [!NOTE]
@@ -124,11 +130,6 @@ In the next section you will understand how to confiure the service.
 
 ## Configuring SAP Alert Notification service 
 Now it is time to configure the  Alert Notification service itself and see it in actions. To do so - please follow the next sections. 
-
-**IMPORTANT:**
-In this exercise it is covered this particular use case: "Alert Notification service - Create a Ticket in a Ticket System based on a custom event". However, keep in mind there are also two more optional use cases related to Alert Notificaiton service:
-- [(Optional) Exercise 6 - Alert Notification service - Send a Notification Email based on a custom event](../ex6/README.md)
-- [(Optional) Exercise 7 -  Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)](../ex7/README.md)
 
 
 > [!NOTE]

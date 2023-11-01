@@ -29,8 +29,7 @@ Following excercise 0 - you should be already loged into your SAP BTP sub-accoun
 
 3. To access the ANS sample app:
 Click on `Cloud Foundry` -> `Spaces` and then select the space that is already provisoned for your SAP BTP subaccount. 
-![](./images/ans-004.png)
-![](./images/ans-005.png)
+![](./images/ans-003_2.png)
 
 4. There is an app named `ans-sample-app-{your_user_id}` where your `{user_id}` is the one associated to your subaccount, e.g. `ad263-002` , `ad263-003`, `ad263-n+1` , etc. Click on the name of your app.
 ![](./images/ans-009.png)

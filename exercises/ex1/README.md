@@ -206,7 +206,7 @@ As a next step you need to create an action - as per the specific use case - it 
 Copy the URL mentioned in Application Routes to notepad and also DO NOT FORGET on top of this url to add the exact api endpoint: `/api/v1/tech-ed/createTicket`.
 
    
-* Payload Tempalte:
+* Payload Template:
 ```
 {
     "subject": "Ticket created by ANS related to resource: {resource.resourceName} and event time stamp: {eventTimestamp}",

@@ -105,8 +105,8 @@ Now it is time to simulate the use case and inspect the outputs. To do so , plea
 For the time of the hands-on session, we were only able to set up the notifications from your cloud environment and trigger also the ops automated reaction. However, do you think it will be great to have some more automatic
 reactions upon the routine problems that occur in the platform.
 
-For these and more complicated DevOps scenarios that occur everyday to each of us, check out [Automation Pilot](https://help.sap.com/viewer/DRAFT/de3900c419f5492a8802274c17e07049/Cloud/en-US/4536e41c57aa442095ccbac977965f26.html).  
-An easy integration to Alert Notification in a few steps is [available](https://help.sap.com/viewer/DRAFT/de3900c419f5492a8802274c17e07049/Cloud/en-US/684d09a964d14d07ac3d6b3a2754765a.html).
+For these and more complicated DevOps scenarios that occur everyday to each of us, check out [Automation Pilot](https://help.sap.com/docs/automation-pilot/automation-pilot/what-is-sap-automation-pilot?version=Cloud).  
+An easy integration to Alert Notification in a few steps is [available](https://help.sap.com/docs/automation-pilot/automation-pilot/integrate-with-sap-alert-notification-service-for-sap-btp?version=Cloud).
 ---
 
 

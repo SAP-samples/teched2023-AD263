@@ -200,10 +200,11 @@ As a next step you need to create an action - as per the specific use case - it 
 * Description: `create a ticket in a Ticketing system`
 * Labels: `ticketingSystem`
 * URL address:  `{teched-incident-demo-ui-url}/api/v1/tech-ed/createTicket` - this is the endpoint to the Ticketing system we will use to create a ticket automatically.
-**NOTE:** to find out the correct URL for `{teched-incident-demo-ui-url}` go back to your SAP BTP subaccount, navigate to `Cloud Foundry` -> `Spaces` -> `AD263-XXX` -> `Applications` -> `teched-incident-demo-uivalue` and then copy the URL mentioned in Application Routes (see the screenshot below). DO not forget on top of this url to add the exact api endpoint: `/api/v1/tech-ed/createTicket`. 
+**NOTE:** to find out the correct URL for `{teched-incident-demo-ui-url}` go back to your SAP BTP subaccount, navigate to `Cloud Foundry` -> `Spaces` -> `AD263-XXX` -> `Applications` -> `teched-incident-demo-uivalue` and then copy the URL mentioned in Application Routes (see the screenshot below).  
 ![](./images/ans-038_1.png)
 
-Copy the URL mentioned in Application Routes to notepad.
+Copy the URL mentioned in Application Routes to notepad and also DO NOT FORGET on top of this url to add the exact api endpoint: `/api/v1/tech-ed/createTicket`.
+
    
 * Payload Tempalte:
 ```
@@ -213,15 +214,15 @@ Copy the URL mentioned in Application Routes to notepad.
 }
 ```
 > [!NOTE]
-> As you see from the event ingested it is possible to use a dynamic value , more details about it can be found at [Alert Notification service - Help documentation --> Webhook Actions](https://help.sap.com/docs/alert-notification/sap-alert-notification-for-sap-btp/webhook-action-types?q=payload)
+> As you see when you add your payload it is possible to model it in a way to incporate dynamic value/s into it , more details about it can be found at [Alert Notification service - Help documentation --> Webhook Actions](https://help.sap.com/docs/alert-notification/sap-alert-notification-for-sap-btp/webhook-action-types?q=payload)
 
 * Click on `Create` button
-![](./images/ans-039.png)
+![](./images/ans-039_1.png)
 
 2.2.3. You will see an confirmation screen that the action has been created. 
 
 Now the action `creteTicket` is created and you should see this action within the "Actions" section. 
-![](./images/ans-040.png)
+![](./images/ans-040_1.png)
 
 
 3. **Create Subscription**
@@ -240,16 +241,16 @@ As a next step you need to create the subscription.
 ![](./images/ans-041.png)
 
 3.2.2. Select Conditions: select the conditions you have created and click on the `Assign` button
-![](./images/ans-042.png)
+![](./images/ans-042_1.png)
 
 3.2.3. Select Actions: select the action you have created and click on the `Assign` button
 ![](./images/ans-043.png)
 
 3.2.4. Confirmation screen: you will see a confirmation screen. Click on `Close` button. 
-![](./images/ans-044.png)
+![](./images/ans-044_1.png)
 
 Now you will see the active subscription you just have configured.
-![](./images/ans-045.png)
+![](./images/ans-045_1.png)
 
 
 #### Simulation and Outputs 
@@ -259,7 +260,7 @@ Now it is time to simulate the use case and inspect the outputs. To do so , plea
 1. Access the ANS Sample App (as already described).
 2. Click on the `Push Warning Notification`
 3. The custom event will be pushed into the Alert Notification sevice Producer API, then Alert Notification service will filter out the event based on the conditions set for the active subcription and it will also trigger the action associated to this very subscription.
-4. Access the UI of the ticketing system that has been already deployed in your BTP CF Space  - `{teched-incident-demo-ui-url}
+4. Access the UI of the ticketing system that has been already deployed in your BTP CF Space  - `{teched-incident-demo-ui-url}`
 5. You should see an incident created automatically by the Alert Notification service (see an example as per the screenshot below). 
 ![](./images/ans-046.png)
 

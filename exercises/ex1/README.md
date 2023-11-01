@@ -142,7 +142,7 @@ Now it is time to configure the  Alert Notification service itself and see it in
 ![](./images/ans-014.png)
 
 #### Solution Diagram: Explained
-In this use case there will be a custom event (`Info Notification` - already explained in previous sections) pushed by the ANS Sample App to the Alert Notification service. Based on an active `Subcription` (which cosists of `Conditions` and `Actions`) in Alert Notification service, the event will be filtered out and an action (create a ticket in a ticketing system)  will be automatically triggered  by the Alert Notification service. Please follow the section below. 
+In this use case there will be a custom event (`Warning Notification` - already explained in previous sections) pushed by the ANS Sample App to the Alert Notification service. Based on an active `Subcription` (which cosists of `Conditions` and `Actions`) in Alert Notification service, the event will be filtered out and an action (create a ticket in a ticketing system)  will be automatically triggered  by the Alert Notification service. Please follow the section below. 
 
 #### Alert Notification service - Configuration
 
@@ -191,6 +191,7 @@ As a next step you need to create an action - as per the specific use case - it 
 ![](./images/ans-021.png)
 
 2.2. There is "Create Action" wizzard displayed , please follow these steps:
+
 2.2.1. Select `Webhook`  and click `Next`
 ![](./images/ans-038.png)
 
@@ -198,8 +199,9 @@ As a next step you need to create an action - as per the specific use case - it 
 * Name: `creteTicket`
 * Description: `create a ticket in a Ticketing system`
 * Labels: `ticketingSystem`
-* URL address:  `{teched-incident-demo-ui-url}/api/v1/tech-ed/createTicket` - this is the endpoint to the Ticketing system we will use to create a ticket automatically. NOTE: to find out the correct URL for `{teched-incident-demo-ui-url}` go back to your SAP BTP subaccount, navigate to `Cloud Foundry` -> `Spaces` -> `AD263-XXX` -> `Applications` -> `teched-incident-demo-uivalue` and then copy the URL mentioned in Application Routes (see the screenshot below). DO not forget on top of this url to add the exact api endpoint: `/api/v1/tech-ed/createTicket`. 
-![](./images/ans-038.png)
+* URL address:  `{teched-incident-demo-ui-url}/api/v1/tech-ed/createTicket` - this is the endpoint to the Ticketing system we will use to create a ticket automatically.
+**NOTE:** to find out the correct URL for `{teched-incident-demo-ui-url}` go back to your SAP BTP subaccount, navigate to `Cloud Foundry` -> `Spaces` -> `AD263-XXX` -> `Applications` -> `teched-incident-demo-uivalue` and then copy the URL mentioned in Application Routes (see the screenshot below). DO not forget on top of this url to add the exact api endpoint: `/api/v1/tech-ed/createTicket`. 
+![](./images/ans-038_1.png)
 
 Copy the URL mentioned in Application Routes to notepad.
    

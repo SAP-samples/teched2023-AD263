@@ -1,4 +1,4 @@
-### Use Case #1: Alert Notification service - Send a Notification Email based on a custom event
+### Use Case #2: Alert Notification service - Send a Notification Email based on a custom event
 
 #### Use Case #1: Solution Diagram
 ![](./images/ans-036.png)

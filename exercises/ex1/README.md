@@ -9,9 +9,9 @@
 ![](./images/ans-007-producer-api.png)
 
 The diagram above is explained as it follows: 
-- there is a cloud app already deployed and running on BTP CF in your subaccount
-- this app is already instrumented with the Alert Notification service java library so that it is possible to be defined different custom events which can be triggered by the app automatically or manually. For this exercise purposes the events will be triggered manually.
-- once the events are triggered by the app, these will be ingested into the Alert Notification service Producer API so that further filtering and actions from the service can be performed. **NOTE**: creating filtering (conditions) and applying specific actions associated to the conditions are described in details
+- there is a cloud app already deployed and running on BTP CF in your subaccount;
+- this app is already instrumented with the Alert Notification service java library so that it is possible to be defined different custom events which can be triggered by the app automatically or manually. For this exercise purposes the events will be triggered manually;
+- once the events are triggered by the app, these will be ingested into the Alert Notification service Producer API so that further filtering and actions from the service can be performed. **NOTE**: creating filtering (conditions) and applying specific actions associated to the conditions are described in detail in the upcoming sections in this exercise.
 
 Following excercise 0 - you should be already loged into your SAP BTP sub-account. If not please make sure you follow these steps: 
 
@@ -19,11 +19,12 @@ Following excercise 0 - you should be already loged into your SAP BTP sub-accoun
 ![](./images/ans-002.png)
 
 2. Once that's done - you should access your SAP BTP Subaccount
-![](./images/ans-003.png)
+![](./images/ans-003_1.png)
 
 3. To access the ANS sample app:
-Click on `Cloud Fioundry` -> `Spaces` and then select the space that is already provisoned for your SAP BTP subaccount. 
-![](./images/ans-006.png)
+Click on `Cloud Foundry` -> `Spaces` and then select the space that is already provisoned for your SAP BTP subaccount. 
+![](./images/ans-004.png)
+![](./images/ans-005.png)
 
 4. There is an app named `ans-sample-app-{your_user_id}` where your `{user_id}` is the one associated to your subaccount, e.g. `ad263-002` , `ad263-003`, `ad263-n+1` , etc. Click on the name of your app.
 ![](./images/ans-009.png)
@@ -122,7 +123,13 @@ In the next section you will understand how to confiure the service.
 
 
 ## Configuring SAP Alert Notification service 
-Now it is time to configure the  Alert Notification service itself and see it in actions for 3 different use cases. To do so - please follow the next sections. 
+Now it is time to configure the  Alert Notification service itself and see it in actions. To do so - please follow the next sections. 
+
+**IMPORTANT:**
+In this exercise it is covered this particular use case: "Alert Notification service - Create a Ticket in a Ticket System based on a custom event". However, keep in mind there are also two more optional use cases related to Alert Notificaiton service:
+- [Exercise 6 - Exercise 6 Description](../ex6/README.md)
+- [Exercise 7 - Exercise 6 Description](../ex7/README.md)
+
 
 > [!NOTE]
 > In order to be able filter and act on the events ingested into the Alert Notification service it is needed to configure: `conditions` (needed to filter out the events which are important for you) , `actions` (specify  actions to be triggered by the Alert Notification service, e.g. send email, send IM notification, trigger HTTPS webhooks, trigger automation flow, etc), and set `subcription` (which is the entiry that binds one or more conditions to one or more actions that have been already set). IMPORTANT: without an active `subcription` no action will be triigered by Alert Notification service.

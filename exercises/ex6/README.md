@@ -1,4 +1,4 @@
-# Exercise 6: Alert Notification service - Send a Notification Email based on a custom event 
+# Exercise 6: (Optional) Alert Notification service - Send a Notification Email based on a custom event 
 
 ## Use Case #2: Solution Diagram
 ![](./images/ans-036.png)

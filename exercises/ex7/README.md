@@ -1,4 +1,4 @@
-###[OPTIONAL] Use Case 3: Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)
+### [OPTIONAL] Use Case 3: Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)
 
 #### Use Case #3: Solution Diagram
 ![](./images/ans-014.png)

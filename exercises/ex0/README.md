@@ -46,12 +46,10 @@ To demonstrate few possible use cases releated to the Alert Notification service
 - [(Optional) Exercise 6 - Alert Notification service - Send a Notification Email based on a custom event](../ex6/README.md)
 - [(Optional) Exercise 7 -  Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)](../ex7/README.md)
 
-The main concept behing the scenarios is that: 
-   	- the cloud app will trigger events which are going to be ingested into the Alert Notification service API;
-   	- based on configurations made within the Alert Notification service (covered in the upcomming excercices) the Alert Notificaiton service is going to trigger actions such as: 
-    	-- create a ticket in an Incident Management (Ticketing system);
-      	-- send an alert via email;
-       	-- fire an automated remediation action. 
+The main concept behing the scenarios is that the cloud app will trigger events which are going to be ingested into the Alert Notification service API. Once that is done, based on configurations made within the Alert Notification service (covered in the upcomming excercices) the Alert Notificaiton service is going to trigger actions such as: 
+- create a ticket in an Incident Management (Ticketing system);
+- send an alert via email;
+- fire an automated remediation action. 
 
 **Note:** In customer environments incident management can be handled by a broad variety of Incident Management Tools provided by different vendors. In this hands-on session we will use a mock application (already deployed in your sub-accoint) to simulate an Incident Management tool with limited functionality. Please note that SAP does not offer or recommend any specific solution.
 

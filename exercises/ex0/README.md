@@ -40,20 +40,26 @@ Select Subaccount: AD263-XXX ***(replace XXX with your group number)***
 
 ## Demo Application for Alert Notification service 
 
-To demonstrate few possible use cases releated to the Alert Notification service, there is a demo application already deployed to your group subaccount AD263-XXX ***(replace XXX with your group number)***. The demo application in question is going to be covered in these two sceanrios:
+To demonstrate few possible use cases releated to the Alert Notification service, there is a demo application already deployed to your group subaccount AD263-XXX ***(replace XXX with your group number)***. The demo application in question is going to be covered in these three sceanrios:
 
-1. Alert Notifications:
-   	- trigger events which are going to be ingested into the Alert Notification service API;
-   	- based on configurations made within the Alert Notification service (covered in the upcomming excercices), send an alert via email 
-2. Incident Management:
-	- trigger events into the Alert Notification service API;
- 	- based on configurations made within the Alert Notification service (covered in the upcomming excercices), create an incident directly into the Incident Management App by calling the respective API
-	- **Note:** In customer environments incident management can be handled by a broad variety of Incident Management Tools provided by different vendors. In this hands-on session we will use a mock application (already deployed in your sub-accoint) to simulate an Incident Management tool with limited functionality. Please note that SAP does not offer or recommend any specific solution.
-3. (optional) Demonstrate instrumentation of this applications for Alert Notification service by enabling the needed java library so that application can send custom events to the Alert Notification API end-point. 
+- [Exercise 1 -  Alert Notification service - Create a Ticket in a Ticket System based on a custom event](../ex1/README.md)
+- [(Optional) Exercise 6 - Alert Notification service - Send a Notification Email based on a custom event](../ex6/README.md)
+- [(Optional) Exercise 7 -  Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)](../ex7/README.md)
+
+The main concept behing the scenarios is that: 
+   	- the cloud app will trigger events which are going to be ingested into the Alert Notification service API;
+   	- based on configurations made within the Alert Notification service (covered in the upcomming excercices) the Alert Notificaiton service is going to trigger actions such as: 
+    	-- create a ticket in an Incident Management (Ticketing system);
+      	-- send an alert via email;
+       	-- fire an automated remediation action. 
+
+**Note:** In customer environments incident management can be handled by a broad variety of Incident Management Tools provided by different vendors. In this hands-on session we will use a mock application (already deployed in your sub-accoint) to simulate an Incident Management tool with limited functionality. Please note that SAP does not offer or recommend any specific solution.
 
 To access the demo application please open the space AD263-XXX ***(replace XXX with your group number)***.
-![](./images/sampleApp-ANS.png)
+![](./images/ans-008.png)
+![](./images/ans-009.png)
 
+You will find an app named `ans-sample-app-{your_user_id}` where your {user_id} is the one associated to your subaccount, e.g. ad263-002 , ad263-003, ad263-n+1
 
 ## Demo Application for Cloud ALM 
 

@@ -155,7 +155,7 @@ In this use case there will be a custom event (`Warning Notification` - already 
 1.1.1.From the left-sidebar menu: select `Conditions` menu item, followed by the button `Create`
 ![](./images/ans-015.png)
 
-1.1.2. Fill in the  details to create the needed dondition. In this use case it we need to create a condition so that we can filter out the events based on a particular `severity`. 
+1.1.2. Fill in the  details to create the needed condition. In this use case it we need to create a condition so that we can filter out the events based on a particular `severity`. 
 * Name:  `severityWarning`
 * Description: `EventSeverity set to WARNING`
 * Label: `severity`

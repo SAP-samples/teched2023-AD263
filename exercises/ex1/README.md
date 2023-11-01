@@ -127,8 +127,8 @@ Now it is time to configure the  Alert Notification service itself and see it in
 
 **IMPORTANT:**
 In this exercise it is covered this particular use case: "Alert Notification service - Create a Ticket in a Ticket System based on a custom event". However, keep in mind there are also two more optional use cases related to Alert Notificaiton service:
-- [Exercise 6 - Exercise 6 Description](../ex6/README.md)
-- [Exercise 7 - Exercise 6 Description](../ex7/README.md)
+- [(Optional) Exercise 6 - Alert Notification service - Send a Notification Email based on a custom event](../ex6/README.md)
+- [(Optional) Exercise 7 -  Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)](../ex7/README.md)
 
 
 > [!NOTE]

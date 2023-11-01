@@ -118,13 +118,13 @@ To access SAP Alert Notification service, since you are already logged into the 
 1. From the left sidebar menu click on `Instances and Subscriptions` memu item to access the BTP services and applications already provisioned for your subacount
 ![](./images/ans-004.png)
 
-2. Scroll to the section `Instances` where you will find all BTP services provisioned in your subaccount. Click on the `ans` instance to access the SAP Alert Notification service.
+2. Scroll down to the section `Instances` where you will find all BTP services provisioned in your subaccount. Click on the `ans` instance to access the SAP Alert Notification service.
 ![](./images/ans-005.png)
 
 3. You will land to your SAP Alert Notification service . 
 ![](./images/ans-006.png)
 
-In the next section you will understand how to confiure the service. 
+In the next section you will understand how to confiure the Alert Notification service so that once an event it is pushed by the cloud applicaiton to be filtered out by the Alert Notificaiton service and a respective action to be triggered as well. 
 
 
 ## Configuring SAP Alert Notification service 
@@ -132,16 +132,16 @@ Now it is time to configure the  Alert Notification service itself and see it in
 
 
 > [!NOTE]
-> In order to be able filter and act on the events ingested into the Alert Notification service it is needed to configure: `conditions` (needed to filter out the events which are important for you) , `actions` (specify  actions to be triggered by the Alert Notification service, e.g. send email, send IM notification, trigger HTTPS webhooks, trigger automation flow, etc), and set `subcription` (which is the entiry that binds one or more conditions to one or more actions that have been already set). IMPORTANT: without an active `subcription` no action will be triigered by Alert Notification service.
+> In order to be able filter and act on the events ingested into the Alert Notification service it is needed to configure: `conditions` (needed to filter out the events which are important for you) , `actions` (specify  actions to be triggered by the Alert Notification service, e.g. send email, send IM notification, trigger HTTPS webhooks, trigger automation flow, etc), and set `subcription` (which is the entity that binds one or more conditions to one or more actions that have been already set). IMPORTANT: without an active `subcription` no action will be triigered by Alert Notification service.
 
 ---
 
 ### Use Case: Alert Notification service - Create a Ticket in a Ticket System based on a custom event
 
-#### Solution Diagram
+#### Solution Diagram: Overview 
 ![](./images/ans-014.png)
 
-#### Explained
+#### Solution Diagram: Explained
 In this use case there will be a custom event (`Info Notification` - already explained in previous sections) pushed by the ANS Sample App to the Alert Notification service. Based on an active `Subcription` (which cosists of `Conditions` and `Actions`) in Alert Notification service, the event will be filtered out and an action (create a ticket in a ticketing system)  will be automatically triggered  by the Alert Notification service. Please follow the section below. 
 
 #### Alert Notification service - Configuration
@@ -166,7 +166,7 @@ In this use case there will be a custom event (`Info Notification` - already exp
 
 1.2. Create a Condition with "Event Type" set to `TechEdDemoEvent`
 > [!NOTE]
-> Since there might be events from different sources with severity set to `INFO` it is a good practice to filter out the events also on other parameters. In this use case, we will use also the "Event type" which for all events pushed by the ANS Sample app is set to `TechEdDemoEvent`. Therefore on a later stage it migth be used a combination of two conditions `severity` **AND** `eventType` to make a unique filtering for the events. However, considering that the landscape for this demo is not that complex and there won't be that many events pushed to the Alert Notification service, for setting up the subscriptions will be used this combination of subscriptions:   `severity` **OR** `eventType`
+> Since there might be events from different sources with severity set to `INFO` it is a good practice to filter out the events also on other parameters. In this use case, we will use also the "Event type" which for all events pushed by the ANS Sample app is set to `TechEdDemoEvent`. Therefore now we build a combination of two conditions `severity` **AND** `eventType` to make a unique filtering for the events.
 
 1.2.1.From the left-sidebar menu: select `Conditions` menu item, followed by the button `Create`
 ![](./images/ans-015.png)
@@ -184,6 +184,7 @@ In this use case there will be a custom event (`Info Notification` - already exp
 
 
 2. **Create Actions**
+
 As a next step you need to create an action - as per the specific use case - it is needed to create an action for creating a ticket in a Ticketing system. To do so follow the steps defined below. 
 
 2.1. From the left-sidebar menu: select `Actions` menu item, followed by the button `Create`
@@ -197,14 +198,21 @@ As a next step you need to create an action - as per the specific use case - it 
 * Name: `creteTicket`
 * Description: `create a ticket in a Ticketing system`
 * Labels: `ticketingSystem`
-* URL address: `{teched-incident-demo-ui-url}{createTicket_api_endpoint}` that has been already deployed in your BTP CF Space - where you can replace `{createTicket_api_endpoint}` with `/api/v1/tech-ed/createTicket`
+* URL address:  `{teched-incident-demo-ui-url}/api/v1/tech-ed/createTicket` - this is the endpoint to the Ticketing system we will use to create a ticket automatically. NOTE: to find out the correct URL for `{teched-incident-demo-ui-url}` go back to your SAP BTP subaccount, navigate to `Cloud Foundry` -> `Spaces` -> `AD263-XXX` -> `Applications` -> `teched-incident-demo-uivalue` and then copy the URL mentioned in Application Routes (see the screenshot below). DO not forget on top of this url to add the exact api endpoint: `/api/v1/tech-ed/createTicket`. 
+![](./images/ans-038.png)
+
+Copy the URL mentioned in Application Routes to notepad.
+   
 * Payload Tempalte:
 ```
 {
-    "subject": "Ticket from ANS Sample App",
+    "subject": "Ticket created by ANS related to resource: {resource.resourceName} and event time stamp: {eventTimestamp}",
     "priority": 2
 }
 ```
+> [!NOTE]
+> As you see from the event ingested it is possible to use a dynamic value , more details about it can be found at [Alert Notification service - Help documentation --> Webhook Actions](https://help.sap.com/docs/alert-notification/sap-alert-notification-for-sap-btp/webhook-action-types?q=payload)
+
 * Click on `Create` button
 ![](./images/ans-039.png)
 

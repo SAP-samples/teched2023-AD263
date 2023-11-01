@@ -28,7 +28,7 @@ For a step-by-step guidance - please follow the section below .
 * You will see a confirmation screen. Then click on the `Close` button. 
 ![](./images/ans-017.png)
 
-1.2. Create a Condition with "Event Type" set to `TechEdDemoEvent`
+1.2. Create a Condition with "Event Type" set to `TechEdDemoEvent` (if you had already created it in the previous exercises - no need to created it)
 > [!NOTE]
 > Since there might be events from different sources with severity set to `INFO` it is a good practice to filter out the events also on other parameters. In this use case, we will use also the "Event type" which for all events pushed by the ANS Sample app is set to `TechEdDemoEvent`. Therefore now we build a combination of two conditions `severity` **AND** `eventType` to make a unique filtering for the events.
 

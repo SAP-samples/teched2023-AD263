@@ -270,5 +270,5 @@ Now it is time to simulate the use case and inspect the outputs. To do so , plea
 
 You've now managed to see Alert Notification service in action. With its flexible events' filtering combined with a rich catalog of actions that can be triggered automatically, the Alert Notification service is a solid product, valuable for each (Dev)Ops team that can be used in a wide variaty in use cases.
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+Continue to - [Exercise 2 - Configuration and Usage of SAP Cloud ALM](../ex2/README.md)
 

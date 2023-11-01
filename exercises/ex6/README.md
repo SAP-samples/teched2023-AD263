@@ -24,13 +24,13 @@ For a step-by-step guidance - please follow the section below .
 * Label: `severity`
 * Condition: use the drop downs so that you can setup the condition correctly = `severity` ->  `Is Equal To` -> `Info`
 * Click on `Create` button to save the configuration
-![](./images/ans-016.png)
+![](./images/ans-016_1.png)
 * You will see a confirmation screen. Then click on the `Close` button. 
 ![](./images/ans-017.png)
 
 1.2. Create a Condition with "Event Type" set to `TechEdDemoEvent`
 > [!NOTE]
-> Since there might be events from different sources with severity set to `INFO` it is a good practice to filter out the events also on other parameters. In this use case, we will use also the "Event type" which for all events pushed by the ANS Sample app is set to `TechEdDemoEvent`. Therefore on a later stage it migth be used a combination of two conditions `severity` **AND** `eventType` to make a unique filtering for the events. However, considering that the landscape for this demo is not that complex and there won't be that many events pushed to the Alert Notification service, for setting up the subscriptions will be used this combination of subscriptions:   `severity` **OR** `eventType`
+> Since there might be events from different sources with severity set to `INFO` it is a good practice to filter out the events also on other parameters. In this use case, we will use also the "Event type" which for all events pushed by the ANS Sample app is set to `TechEdDemoEvent`. Therefore now we build a combination of two conditions `severity` **AND** `eventType` to make a unique filtering for the events.
 
 1.2.1.From the left-sidebar menu: select `Conditions` menu item, followed by the button `Create`
 ![](./images/ans-015.png)
@@ -41,7 +41,7 @@ For a step-by-step guidance - please follow the section below .
 * Label: `eventType`
 * Condition: use the drop downs so that you can setup the condition correctly = `eventType` ->  `Is Equal To` -> `TechEdDemoEvent`
 * Click on `Create` button to save the configuration
-![](./images/ans-018.png)
+![](./images/ans-018_1.png)
 * You will see a confirmation screen. Then click on the `Close` button. 
 ![](./images/ans-019.png)
 
@@ -112,7 +112,7 @@ Now you will see the active subscription you just have configured.
 ![](./images/ans-034.png)
 
 
-#### Use Case #1: Simulation and Outputs 
+#### Use Case #2: Simulation and Outputs 
 
 Now it is time to simulate the use case and inspect the outputs. To do so , please follow these steps: 
 

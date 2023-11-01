@@ -44,7 +44,7 @@ Click on `Cloud Foundry` -> `Spaces` and then select the space that is already p
 Please see below exact attributes for each of the 3 events pushed from the ANS Sample App to the Alert Notification service Producer API. 
 
 **Push Info Notification**
-It pushes a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.INFO)`
+It pushes a custom event `.withType("TechEdDemoEvent")` and `.withSeverity(EventSeverity.INFO)`
 Event code is shared as well here: 
 ```
 public static CustomerResourceEvent buildWarningEvent() {
@@ -63,7 +63,7 @@ public static CustomerResourceEvent buildWarningEvent() {
 ```
 
 **Push Warning Notification**
-It pushes a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.WARNING)`
+It pushes a custom event `.withType("TechEdDemoEvent")` and `.withSeverity(EventSeverity.WARNING)`
 
 Event code is shared as well here: 
 ```
@@ -84,7 +84,7 @@ public static CustomerResourceEvent buildWarningEvent() {
 
 
 **Push Error Notification**
-It pushes a custom event `.withType("demo-application")` and `.withSeverity(EventSeverity.ERROR)`
+It pushes a custom event `.withType("TechEdDemoEvent")` and `.withSeverity(EventSeverity.ERROR)`
 
 Event code is shared as well here: 
 ```

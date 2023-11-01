@@ -8,7 +8,7 @@
 **Context**
 ![](./images/ans-007-producer-api.png)
 
-The diagram above is explained underneath: 
+The diagram above is explained as it follows: 
 - there is a cloud app already deployed and running on BTP CF in your subaccount
 - this app is already instrumented with the Alert Notification service java library so that it is possible to be defined different custom events which can be triggered by the app automatically or manually. In our use cases the events can be triggered manually.
 - once the events are triggered by the app, these will be ingested into the Alert Notification service Producer API so that further filtering and actions from the service can be performed. **NOTE**: creating filtering (conditions) and applying specific actions associated to the conditions are described in details

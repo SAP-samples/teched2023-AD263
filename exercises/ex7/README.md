@@ -1,12 +1,12 @@
 # Exercise 7: (Optional) [ADVANCED] Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)
 
-## Use Case #2: Solution Diagram
+## Use Case: Solution Diagram
 ![](./images/ans-047.png)
 
-## Use Case #2: Explained
+## Use Case: Explained
 In this use case there will be a custom event (`Error Notification` - already explained in previous sections) pushed by the ANS Sample App to the Alert Notification service. Based on an active `Subcription` (which cosists of `Conditions` and `Actions`) in Alert Notification service, the event will be filtered out and an action (an Ops remeditation command via SAP Automation Pilot) will be automatically triggered by the Alert Notification service. Please follow the section below. 
 
-## Use Case #2: Alert Notification service - Configuration
+## Use Case: Alert Notification service - Configuration
 
 **Access the Alert Notification service** overview page (as already covered in [Exercise 1 - Access SAP Alert Notification service](https://github.com/SAP-samples/teched2023-AD263/tree/main/exercises/ex1#access-sap-alert-notification-service) )
 

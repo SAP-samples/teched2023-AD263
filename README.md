@@ -31,6 +31,9 @@ The requirements to follow the exercises in this repository
 - [Exercise 2 - Configuration and Usage of SAP Cloud ALM](exercises/ex2/)
 - [Exercise 3 - Configure Integration with External Ticket Management System from Cloud ALM](exercises/ex3/)
 - [Exercise 4 - End-to-End Execution](exercises/ex4/)
+- [Exercise 5 (Optional) - Excursion – Instrument BTP PaaS Java Application ](../ex5/README.md)
+- [Exercise 6 (Optional) - Alert Notification service - Send a Notification Email based on a custom event](../ex6/README.md)
+- [Exercise 7 (Optional) -  Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)](../ex7/README.md)
 
 ## Background Information
 

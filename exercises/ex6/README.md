@@ -121,7 +121,6 @@ Now it is time to simulate the use case and inspect the outputs. To do so , plea
 3. The custom event will be pushed into the Alert Notification sevice Producer API, then Alert Notification service will filter out the event based on the conditions set for the active subcription and it will also trigger the action associated to this very subscription.
 4. Check your inbox - you should get the expected email notifcation sent by the Alert Notification service (see an example as per the screenshot below). 
 ![](./images/ans-035.png)
-
 ### Summary
 Now you have learned how trigger alert notification emails via SAP Alert Notification service based on specific conditions. If you want also to learn how to tirgger Ops automation commands / flows please proceed to [Exercise 7 (Optional) -  Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)](https://github.com/SAP-samples/teched2023-AD263/blob/main/exercises/ex7/README.md#use-case-solution-diagram)https://github.com/SAP-samples/teched2023-AD263/blob/main/exercises/ex7/README.md#use-case-solution-diagram)
 

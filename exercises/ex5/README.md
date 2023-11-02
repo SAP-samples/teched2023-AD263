@@ -1,4 +1,4 @@
-# Excurse – Instrument BTP PaaS Java Application
+# Excursion – Instrument BTP PaaS Java Application
 
 
 ## Check Cloud ALM instrumentation of the Demo Application 

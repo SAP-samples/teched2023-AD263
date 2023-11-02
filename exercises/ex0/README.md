@@ -51,6 +51,12 @@ The main concept behing the scenarios is that the cloud app will trigger events 
 - send an alert via email;
 - fire an automated remediation action. 
 
+> [!NOTE]
+> The Demo Application for Alert Notification service is instumented with an Open Source Java client library so that the application can be configured to push events to the Alert Notificaiton service based on a certain logic. For more details about the library you can check out this link: [Java Client Library (Open Source)](https://help.sap.com/docs/alert-notification/sap-alert-notification-for-sap-btp/integrating-with-custom-application?state=DRAFT&q=library#open-source-java-client-library)
+
+> [!NOTE]
+> Any custom app can be integrated to Alert Notification service. If interested in - please check out this link: [Integration with a custom app](https://help.sap.com/docs/alert-notification/sap-alert-notification-for-sap-btp/integrating-with-custom-application). 
+
 **Note:** In customer environments incident management can be handled by a broad variety of Incident Management Tools provided by different vendors. In this hands-on session we will use a mock application (already deployed in your sub-accoint) to simulate an Incident Management tool with limited functionality. Please note that SAP does not offer or recommend any specific solution.
 
 To access the demo application please open the space AD263-XXX ***(replace XXX with your group number)***.

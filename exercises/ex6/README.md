@@ -123,6 +123,6 @@ Now it is time to simulate the use case and inspect the outputs. To do so , plea
 ![](./images/ans-035.png)
 
 ### Summary
-Now you have learned how trigger alert notification emails via SAP Alert Notification service based on specific conditions. If you want also to learn how to tirgger Ops automation commands / flows please proceed to [Exercise 7 (Optional) -  Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)](exercises/ex7/)
+Now you have learned how trigger alert notification emails via SAP Alert Notification service based on specific conditions. If you want also to learn how to tirgger Ops automation commands / flows please proceed to [Exercise 7 (Optional) -  Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)](.../ex7/README.md)
 
 

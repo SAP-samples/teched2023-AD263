@@ -34,7 +34,7 @@ The requirements to follow the exercises in this repository
 
 ## Background Information
 
-- [Excurse - Cloud ALM instrumentation (optional)](exercises/ex5/)
+- [Excursion - Cloud ALM instrumentation (optional)](exercises/ex5/)
 
 ## Presentation
 Access the ...

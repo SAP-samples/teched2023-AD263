@@ -1,13 +1,13 @@
 # Exercise 6: (Optional) Alert Notification service - Send a Notification Email based on a custom event 
 
-## Use Case #2: Solution Diagram
+## Use Case: Solution Diagram
 ![](./images/ans-036.png)
 
 ## Use Case #2: Explained
 In this use case there will be a custom event (`Info Notification` - already explained in previous sections) pushed by the ANS Sample App to the Alert Notification service. Based on an active `Subcription` (which cosists of `Conditions` and `Actions`) in Alert Notification service,  the event will be filtered out and an action (send a notification email) will be automatically triggered by the Alert Notification service. 
 For a step-by-step guidance - please follow the section below . 
 
-## Use Case #2: Alert Notification service - Configuration
+## Use Case: Alert Notification service - Configuration
 
 **Access the Alert Notification service** overview page (as already covered in [Exercise 1 - Access SAP Alert Notification service](https://github.com/SAP-samples/teched2023-AD263/tree/main/exercises/ex1#access-sap-alert-notification-service) )
 
@@ -112,7 +112,7 @@ Now you will see the active subscription you just have configured.
 ![](./images/ans-034.png)
 
 
-#### Use Case #2: Simulation and Outputs 
+#### Use Case: Simulation and Outputs 
 
 Now it is time to simulate the use case and inspect the outputs. To do so , please follow these steps: 
 

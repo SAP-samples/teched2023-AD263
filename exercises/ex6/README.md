@@ -122,4 +122,7 @@ Now it is time to simulate the use case and inspect the outputs. To do so , plea
 4. Check your inbox - you should get the expected email notifcation sent by the Alert Notification service (see an example as per the screenshot below). 
 ![](./images/ans-035.png)
 
+### Summary
+Now you have learned how trigger alert notification emails via SAP Alert Notification service based on specific conditions. If you want also to learn how to tirgger Ops automation commands / flows please proceed to [Exercise 7 (Optional) -  Alert Notification service - Trigger an Ops Remedtiation Command (via SAP Automation Pilot)](exercises/ex7/)
+
 

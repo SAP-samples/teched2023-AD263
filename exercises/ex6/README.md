@@ -3,7 +3,7 @@
 ## Use Case: Solution Diagram
 ![](./images/ans-036.png)
 
-## Use Case #2: Explained
+## Use Case: Explained
 In this use case there will be a custom event (`Info Notification` - already explained in previous sections) pushed by the ANS Sample App to the Alert Notification service. Based on an active `Subcription` (which cosists of `Conditions` and `Actions`) in Alert Notification service,  the event will be filtered out and an action (send a notification email) will be automatically triggered by the Alert Notification service. 
 For a step-by-step guidance - please follow the section below . 
 

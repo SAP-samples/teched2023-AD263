@@ -10,7 +10,7 @@ As in the diagramm above shown in this exercise we will now configure SAP Cloud 
 
 Logon to the AD263 SAP Cloud ALM Tenant:
 
-<https://ad263-ptnlz9xc.eu10.alm.cloud.sap/launchpad>
+<https://cloud-alm.url/launchpad>
 
 Select the **tdct3ched1.accounts.ondemand.com** Identity Provider. Use the credentials as provided in Excercise 0.
 
